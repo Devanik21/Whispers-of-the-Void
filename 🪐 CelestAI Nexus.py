@@ -73,7 +73,7 @@ def load_lottie_file(filepath):
         return json.load(file)
 
 # Load and display Lottie animation
-animation_path = "alien_signal.json"  # Update with the correct path
+animation_path = "AI.json"  # Update with the correct path
 try:
     animation = load_lottie_file(animation_path)
     st_lottie(animation, speed=1, loop=True, quality="high", height=250, key="animation")
