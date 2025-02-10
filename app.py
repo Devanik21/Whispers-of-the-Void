@@ -8,6 +8,7 @@ PAGES = {
     "🔍 Analyze": "analyze.py",
     "🔭 Insights": "insights.py",
     "📝 Feedback": "feedback.py",
+    "🪐 CelestAI Nexus":"🪐 CelestAI Nexus.py",
     "📚 About": "about.py",
     "🔍 Advanced Insights": "Advanced Insights.py",  # New page added
 }
