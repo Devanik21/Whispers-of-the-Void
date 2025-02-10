@@ -5,12 +5,7 @@ from streamlit_lottie import st_lottie
 import requests
 
 # MUST be the very first Streamlit command
-st.set_page_config(
-    page_title="AstroMine AI",
-    page_icon="🪐",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
+
 
 # Now you can add your custom CSS and other content
 st.markdown(
