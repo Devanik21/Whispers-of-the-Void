@@ -4,7 +4,7 @@ import json
 from streamlit_lottie import st_lottie
 import requests
 
-# Configure the page
+# MUST be the very first Streamlit command
 st.set_page_config(
     page_title="AstroMine AI",
     page_icon="🪐",
@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Custom CSS for a rare, futuristic, vibrant look
+# Now you can add your custom CSS and other content
 st.markdown(
     """
     <style>
@@ -53,63 +53,5 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Sidebar Configuration
-with st.sidebar:
-    st.markdown("### 🚀 Welcome to AstroMine AI")
-    api_key = st.text_input("🔑 Enter Google Gemini API Key:", type="password")
-    if api_key:
-        genai.configure(api_key=api_key)
-    
-    st.markdown("#### 💡 Example Prompts:")
-    example_prompts = [
-        "What is space mining?",
-        "How can AI help in space exploration?",
-        "What are the key minerals found on asteroids?",
-        "How does Galactic Mining Hub work?",
-    ]
-    for prompt in example_prompts:
-        if st.button(prompt):
-            st.session_state.user_input = prompt
-
-    st.markdown("---")
-
-# Function to load Lottie animation
-def load_lottie_file(filepath):
-    with open(filepath, "r", encoding="utf-8") as file:
-        return json.load(file)
-
-# Load and display Lottie animation
-animation_path = "src/AI.json"
-try:
-    animation = load_lottie_file(animation_path)
-    st_lottie(animation, speed=1, loop=True, quality="high", height=250, key="animation")
-except Exception as e:
-    st.error(f"Error loading animation: {e}")
-
-st.markdown(
-    """
-    <div style="text-align: center; margin-top: 50px;">
-        <h1 style="color: #ffdd00; text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);"><strong>🚀 AstroMine AI 🌌</strong></h1>
-        <p style="color: #ff9a8b; font-size: 20px; font-weight: bold;">Your AI companion for futuristic space exploration and asteroid mining insights! 🔥</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown("---")
-
-# Chatbot Interaction
-user_input = st.text_area("💬 Ask a question about space mining:")
-if st.button("🚀 Send Query"):
-    if not api_key:
-        st.warning("⚠️ Please enter a valid Google Gemini API key in the sidebar.")
-    elif not user_input.strip():
-        st.warning("⚠️ Please enter a query.")
-    else:
-        try:
-            model = genai.GenerativeModel("gemini-pro")
-            response = model.generate_content(user_input)
-            st.success("✨ AI Response:")
-            st.markdown(f"<p style='background: linear-gradient(to right, #8e44ad, #c0392b); padding:12px; border-radius:12px; color:white; font-weight:bold;'>{response.text}</p>", unsafe_allow_html=True)
-        except Exception as e:
-            st.error(f"Error: {e}")
+# Continue with the rest of your app...
+# Sidebar Configuration, Lottie animation, chatbot interaction, etc.
