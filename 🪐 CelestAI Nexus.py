@@ -1,109 +1,210 @@
-import streamlit as st 
-import google.generativeai as genai
-import json
-from streamlit_lottie import st_lottie
-import requests
-
-# Configure the page
-
-# Custom CSS for a rare, futuristic, vibrant look
-st.markdown(
-    """
-    <style>
-        body {
-            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-            color: #ffffff;
+{
+  "v": "5.7.4",
+  "meta": {
+    "g": "LottieFiles AE 1.0.0",
+    "a": "",
+    "k": "",
+    "d": "",
+    "tc": ""
+  },
+  "fr": 30,
+  "ip": 0,
+  "op": 300,
+  "w": 500,
+  "h": 500,
+  "nm": "Advanced Cosmic Animation",
+  "ddd": 0,
+  "assets": [],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 4,
+      "nm": "Background",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [250, 250, 0], "ix": 2 },
+        "a": { "a": 0, "k": [0, 0, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "shapes": [
+        {
+          "ty": "rc",
+          "d": 1,
+          "s": { "a": 0, "k": [500, 500], "ix": 2 },
+          "p": { "a": 0, "k": [0, 0], "ix": 3 },
+          "r": { "a": 0, "k": 0, "ix": 4 },
+          "nm": "Rectangle Path 1",
+          "mn": "ADBE Vector Shape - Rect",
+          "hd": false
+        },
+        {
+          "ty": "fl",
+          "c": { "a": 0, "k": [0.05, 0.05, 0.1, 1], "ix": 4 },
+          "o": { "a": 0, "k": 100, "ix": 5 },
+          "r": 1,
+          "nm": "Fill 1",
+          "mn": "ADBE Vector Graphic - Fill",
+          "hd": false
+        },
+        {
+          "ty": "tr",
+          "p": { "a": 0, "k": [0, 0], "ix": 2 },
+          "a": { "a": 0, "k": [0, 0], "ix": 1 },
+          "s": { "a": 0, "k": [100, 100], "ix": 3 },
+          "r": { "a": 0, "k": 0, "ix": 6 },
+          "o": { "a": 0, "k": 100, "ix": 7 },
+          "sk": { "a": 0, "k": 0, "ix": 4 },
+          "sa": { "a": 0, "k": 0, "ix": 5 },
+          "nm": "Transform"
         }
-        .sidebar .sidebar-content {
-            background: linear-gradient(to bottom, #ff512f, #dd2476);
-            padding: 20px;
-            border-radius: 15px;
-            color: white;
+      ],
+      "ip": 0,
+      "op": 300,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 4,
+      "nm": "Planet",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "t": 0,
+              "s": [0],
+              "e": [360],
+              "i": { "x": [0.667], "y": [1] },
+              "o": { "x": [0.333], "y": [0] }
+            },
+            {
+              "t": 300,
+              "s": [360],
+              "e": [720]
+            }
+          ],
+          "ix": 10
+        },
+        "p": { "a": 0, "k": [250, 250, 0], "ix": 2 },
+        "a": { "a": 0, "k": [0, 0, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "shapes": [
+        {
+          "ty": "el",
+          "p": { "a": 0, "k": [0, 0], "ix": 3 },
+          "s": { "a": 0, "k": [150, 150], "ix": 2 },
+          "nm": "Ellipse Path 1",
+          "mn": "ADBE Vector Shape - Ellipse",
+          "hd": false
+        },
+        {
+          "ty": "fl",
+          "c": { "a": 0, "k": [0.2, 0.4, 0.8, 1], "ix": 4 },
+          "o": { "a": 0, "k": 100, "ix": 5 },
+          "r": 1,
+          "nm": "Fill 1",
+          "mn": "ADBE Vector Graphic - Fill",
+          "hd": false
+        },
+        {
+          "ty": "tr",
+          "p": { "a": 0, "k": [0, 0], "ix": 2 },
+          "a": { "a": 0, "k": [0, 0], "ix": 1 },
+          "s": { "a": 0, "k": [100, 100], "ix": 3 },
+          "r": { "a": 0, "k": 0, "ix": 6 },
+          "o": { "a": 0, "k": 100, "ix": 7 },
+          "sk": { "a": 0, "k": 0, "ix": 4 },
+          "sa": { "a": 0, "k": 0, "ix": 5 },
+          "nm": "Transform"
         }
-        .stTextInput>div>div>input {
-            background-color: #6a0572;
-            color: white;
-            border-radius: 10px;
-            padding: 8px;
-            font-weight: bold;
+      ],
+      "ip": 0,
+      "op": 300,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 3,
+      "ty": 4,
+      "nm": "Orbiting Star",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.667, "y": 0.667 },
+              "o": { "x": 0.333, "y": 0.333 },
+              "t": 0,
+              "s": [350, 250, 0]
+            },
+            {
+              "t": 75,
+              "s": [250, 350, 0]
+            },
+            {
+              "t": 150,
+              "s": [150, 250, 0]
+            },
+            {
+              "t": 225,
+              "s": [250, 150, 0]
+            },
+            {
+              "t": 300,
+              "s": [350, 250, 0]
+            }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [0, 0, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "shapes": [
+        {
+          "ty": "el",
+          "p": { "a": 0, "k": [0, 0], "ix": 3 },
+          "s": { "a": 0, "k": [30, 30], "ix": 2 },
+          "nm": "Ellipse Path 1",
+          "mn": "ADBE Vector Shape - Ellipse",
+          "hd": false
+        },
+        {
+          "ty": "fl",
+          "c": { "a": 0, "k": [1, 1, 0, 1], "ix": 4 },
+          "o": { "a": 0, "k": 100, "ix": 5 },
+          "r": 1,
+          "nm": "Fill 1",
+          "mn": "ADBE Vector Graphic - Fill",
+          "hd": false
+        },
+        {
+          "ty": "tr",
+          "p": { "a": 0, "k": [0, 0], "ix": 2 },
+          "a": { "a": 0, "k": [0, 0], "ix": 1 },
+          "s": { "a": 0, "k": [100, 100], "ix": 3 },
+          "r": { "a": 0, "k": 0, "ix": 6 },
+          "o": { "a": 0, "k": 100, "ix": 7 },
+          "sk": { "a": 0, "k": 0, "ix": 4 },
+          "sa": { "a": 0, "k": 0, "ix": 5 },
+          "nm": "Transform"
         }
-        .stTextArea>div>textarea {
-            background: #ff9966;
-            color: black;
-            border-radius: 15px;
-            padding: 12px;
-            font-weight: bold;
-        }
-        .stButton>button {
-            background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-            color: white;
-            font-weight: bold;
-            border-radius: 10px;
-            padding: 10px 20px;
-            box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Sidebar Configuration
-with st.sidebar:
-    st.markdown("### 🚀 Welcome to AstroMine AI")
-    api_key = st.text_input("🔑 Enter Google Gemini API Key:", type="password")
-    if api_key:
-        genai.configure(api_key=api_key)
-    
-    st.markdown("#### 💡 Example Prompts:")
-    example_prompts = [
-        "What is space mining?",
-        "How can AI help in space exploration?",
-        "What are the key minerals found on asteroids?",
-        "How does Galactic Mining Hub work?",
-    ]
-    for prompt in example_prompts:
-        if st.button(prompt):
-            st.session_state.user_input = prompt
-
-    st.markdown("---")
-
-# Function to load Lottie animation
-def load_lottie_file(filepath):
-    with open(filepath, "r", encoding="utf-8") as file:
-        return json.load(file)
-
-# Load and display Lottie animation
-animation_path = "AI.json"
-try:
-    animation = load_lottie_file(animation_path)
-    st_lottie(animation, speed=1, loop=True, quality="high", height=250, key="animation")
-except Exception as e:
-    st.error(f"Error loading animation: {e}")
-
-st.markdown(
-    """
-    <div style="text-align: center; margin-top: 50px;">
-        <h1 style="color: #ffdd00; text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);"><strong>🚀 AstroMine AI 🌌</strong></h1>
-        <p style="color: #ff9a8b; font-size: 20px; font-weight: bold;">Your AI companion for futuristic space exploration and asteroid mining insights! 🔥</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-st.markdown("---")
-
-# Chatbot Interaction
-user_input = st.text_area("💬 Ask a question about space mining:")
-if st.button("🚀 Send Query"):
-    if not api_key:
-        st.warning("⚠️ Please enter a valid Google Gemini API key in the sidebar.")
-    elif not user_input.strip():
-        st.warning("⚠️ Please enter a query.")
-    else:
-        try:
-            model = genai.GenerativeModel("gemini-pro")
-            response = model.generate_content(user_input)
-            st.success("✨ AI Response:")
-            st.markdown(f"<p style='background: linear-gradient(to right, #8e44ad, #c0392b); padding:12px; border-radius:12px; color:white; font-weight:bold;'>{response.text}</p>", unsafe_allow_html=True)
-        except Exception as e:
-            st.error(f"Error: {e}")
+      ],
+      "ip": 0,
+      "op": 300,
+      "st": 0,
+      "bm": 0
+    }
+  ]
+}
