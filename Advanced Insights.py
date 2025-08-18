@@ -6,6 +6,7 @@ import numpy as np
 import plotly.express as px
 from scipy import stats
 
+
 # Set page configuration with an attractive layout
 
 # Custom CSS for a modern, advanced design
