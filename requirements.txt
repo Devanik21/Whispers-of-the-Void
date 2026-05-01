@@ -7,13 +7,12 @@ scipy
 xgboost
 lightgbm
 catboost
-tensorflow
 keras
 torch
 torchvision
 pytorch-lightning
 statsmodels
 plotly
-streamlit==1.38.0
+streamlit
 google-generativeai
 streamlit_lottie
