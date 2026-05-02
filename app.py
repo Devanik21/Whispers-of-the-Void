@@ -19,7 +19,7 @@ def load_page(page_file):
 
 def main():
     # Set the page configuration
-    st.set_page_config(page_title="Signal Classification App", page_icon="🛸", layout="wide")
+    st.set_page_config(page_title="Whispers of the Void", page_icon="🛸", layout="wide")
     
     # Custom header
     st.markdown("""
@@ -34,7 +34,7 @@ def main():
         }
         </style>
         <div class="header">
-            <h1>Signal Classification App</h1>
+            <h1>Whispers of the Void</h1>
             <p>Your gateway for analyzing and predicting signals</p>
         </div>
     """, unsafe_allow_html=True)
@@ -63,7 +63,7 @@ def main():
         }
         </style>
         <div class="footer">
-            <p>&copy; 2024 Signal Classification App</p>
+            <p>&copy; 2024 Whispers of the Void</p>
             <p>Follow me on <a href="https://www.linkedin.com/in/devanik/" target="_blank">Linkedin</a> | <a href="https://github.com/Devanik21" target="_blank">GitHub</a></p>
         </div>
     """, unsafe_allow_html=True)
