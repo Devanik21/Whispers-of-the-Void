@@ -83,7 +83,7 @@ def app():
 
     # Display user input
     st.subheader('📝 User Input Features')
-    st.write(features, key="write", unsafe_allow_html=True)
+    st.write(features)
     # Add button to make prediction
     if st.button('🔍 Make Prediction'):
         if model is not None:
