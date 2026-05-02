@@ -1,6 +1,10 @@
 
 # 🛸 Whispers of the Void
 
+<img width="1672" height="941" alt="ChatGPT Image May 2, 2026, 09_52_30 AM" src="https://github.com/user-attachments/assets/638fe6cd-6d16-4fe6-b6e7-e73a69e44c29" />
+
+
+---
 A modular, Streamlit-based signal intelligence platform for **narrowband signal analysis, machine learning prediction, statistical exploration, advanced visualization, and Gemini-powered conversational insight**.
 
 This repository is organized as a multi-page analytical system. The main router loads specialized pages for prediction, recommendation, visualization, analysis, insights, feedback, and AI-assisted exploration. :contentReference[oaicite:0]{index=0}
