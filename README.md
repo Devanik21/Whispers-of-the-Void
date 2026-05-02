@@ -556,12 +556,7 @@ The repository architecture and implemented behaviors are reflected directly in 
 
 ## License
 
-Choose the license that matches your intended distribution model:
-
 * MIT
-* Apache 2.0
-* GPL-3.0
-* Proprietary
 
 ---
 
