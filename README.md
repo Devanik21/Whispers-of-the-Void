@@ -565,10 +565,23 @@ Choose the license that matches your intended distribution model:
 
 ---
 
+
+
+
+
 ## Final Note
 
 This repository is structured like a compact **signal intelligence lab**: it combines prediction, visualization, statistical inference, AI reasoning, and user feedback inside one modular Streamlit application. Its strength is breadth: the same dataset can be explored as a classification problem, a visualization problem, a statistical problem, and a conversational AI problem.
 
+## Citation & Copyright
 
+This repository, **Whispers of the Void**, is an original research and creative work authored by **Devanik (GitHub: Devanik21)** in 2024.  
+All code, documentation, and conceptual frameworks herein are proprietary to the author unless otherwise noted.  
 
+When referencing this project in academic, technical, or creative contexts, please cite as:
 
+**Devanik (2024). _Whispers of the Void: Machine Learning for Radio Signal Classification and SETI-inspired Analysis._ GitHub Repository: Devanik21/Whispers-of-the-Void**
+
+---
+
+© 2024 — Original work by Devanik (GitHub: Devanik21). All rights reserved.
