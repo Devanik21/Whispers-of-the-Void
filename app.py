@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Define pages and their corresponding script filenames
+# Define pages and their corresponding script filenames 
 PAGES = {
     "🚀 Predict": "predict.py",
     "✨ Recommend": "recommend.py",
