@@ -101,7 +101,7 @@ if st.button("🛸 Analyze Signal"):
         st.warning("⚠️ Please enter a query.")
     else:
         try:
-            model = genai.GenerativeModel("gemini-2.0-flash")
+            model = genai.GenerativeModel("gemini-flash-lite-latest")
             response = model.generate_content(user_input)
             st.success("✨ AI Analysis:")
             st.markdown(f"<p style='background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b); padding:12px; border-radius:12px; color:white; font-weight:bold;'>{response.text}</p>", unsafe_allow_html=True)
