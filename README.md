@@ -3,6 +3,9 @@
 
 <img width="1672" height="941" alt="ChatGPT Image May 2, 2026, 09_52_30 AM" src="https://github.com/user-attachments/assets/638fe6cd-6d16-4fe6-b6e7-e73a69e44c29" />
 
+> "Two possibilities exist: either we are alone in the Universe or we are not. Both are equally terrifying."
+> — Arthur C. Clarke
+
 
 ---
 A modular, Streamlit-based signal intelligence platform for **narrowband signal analysis, machine learning prediction, statistical exploration, advanced visualization, and Gemini-powered conversational insight**.
