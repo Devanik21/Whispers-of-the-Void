@@ -1,5 +1,5 @@
 
-# 🛸 Signal Classification App
+# 🛸 Whispers of the Void
 
 A modular, Streamlit-based signal intelligence platform for **narrowband signal analysis, machine learning prediction, statistical exploration, advanced visualization, and Gemini-powered conversational insight**.
 
@@ -36,7 +36,7 @@ This repository is organized as a multi-page analytical system. The main router 
 
 ## Project Overview
 
-The **Signal Classification App** is a research-oriented Streamlit application built around a narrowband signal dataset. It combines interactive dashboards, classical machine learning, statistical diagnostics, and AI-assisted question answering into a single unified interface.
+The **Whispers of the Void** is a research-oriented Streamlit application built around a narrowband signal dataset. It combines interactive dashboards, classical machine learning, statistical diagnostics, and AI-assisted question answering into a single unified interface.
 
 The app is intentionally modular. Each page focuses on one analytical responsibility, which makes the codebase easier to extend, debug, and repurpose for related signal-intelligence or astrophysical data analysis workflows. The central navigation shell in `app.py` routes users to pages such as Predict, Recommend, Visualize, Analyze, Insights, Feedback, CelestAI Nexus, and Advanced Insights. :contentReference[oaicite:1]{index=1}
 
