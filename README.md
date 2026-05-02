@@ -118,7 +118,7 @@ The main app file defines a `PAGES` mapping and loads the selected page script d
 
 ```text
 .
-├── app(1).py
+├── app.py
 ├── predict.py
 ├── recommend.py
 ├── visualize.py
@@ -139,7 +139,7 @@ The main app file defines a `PAGES` mapping and loads the selected page script d
 
 ## Module Breakdown
 
-### `app(1).py`
+### `app.py`
 
 The main navigation controller. It sets the page configuration, renders the shared header/footer, shows a sidebar image, and loads the selected page from the `PAGES` dictionary. The available pages include Predict, Recommend, Visualize, Analyze, Insights, Feedback, CelestAI Nexus, About, and Advanced Insights. 
 
@@ -379,10 +379,10 @@ The app expects:
 
 ## Running the App
 
-If the main entry file is `app(1).py`:
+If the main entry file is `app.py`:
 
 ```bash
-streamlit run app(1).py
+streamlit run app.py
 ```
 
 If you rename it to `app.py` for cleanup:
@@ -543,7 +543,7 @@ Built with:
 * Google Generative AI
 * Streamlit Lottie
 
-The repository architecture and implemented behaviors are reflected directly in the source modules: main routing in `app(1).py`, visualization in `visualize.py`, analysis in `analyze.py`, advanced insight generation in `insights.py` and `Advanced Insights.py`, prediction in `predict.py`, recommendations in `recommend.py`, Gemini-based assistant functionality in `CelestAI Nexus.py`, and user feedback capture in `feedback.py`.
+The repository architecture and implemented behaviors are reflected directly in the source modules: main routing in `app.py`, visualization in `visualize.py`, analysis in `analyze.py`, advanced insight generation in `insights.py` and `Advanced Insights.py`, prediction in `predict.py`, recommendations in `recommend.py`, Gemini-based assistant functionality in `CelestAI Nexus.py`, and user feedback capture in `feedback.py`.
 
 ---
 
