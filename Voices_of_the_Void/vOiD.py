@@ -110,8 +110,8 @@ _PAL = dict(
     blue    = "#0099ff",    # data blue
     glass   = "rgba(22,25,18,0.68)",     # earthy glass panel bg
     glass2  = "rgba(14,16,12,0.82)",     # darker earthy glass
-    border  = "rgba(150,168,104,0.18)",  # ghost border 
-    border2 = "rgba(150,168,104,0.08)",  # even lighter border
+    border  = "rgba(0,255,136,0.18)",  # ghost border 
+    border2 = "rgba(0,255,136,0.08)",  # even lighter border
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -207,7 +207,7 @@ h1,h2,h3,h4,h5,h6 {{
 /* ─── SCROLLBAR ──────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {{ width:3px; height:3px; }}
 ::-webkit-scrollbar-track {{ background: transparent; }}
-::-webkit-scrollbar-thumb {{ background: rgba(150,168,104,.25); border-radius:0; }}
+::-webkit-scrollbar-thumb {{ background: rgba(0,255,136,.25); border-radius:0; }}
 ::-webkit-scrollbar-thumb:hover {{ background: var(--fg); }}
 
 /* ─── SIDEBAR ─────────────────────────────────────────────────────────────  */
@@ -274,9 +274,9 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 
 /* ─── BUTTONS ─────────────────────────────────────────────────────────────── */
 .stButton > button {{
-  background: rgba(150,168,104,0.07) !important;
+  background: rgba(0,255,136,0.07) !important;
   color: var(--fg) !important;
-  border: 1px solid rgba(150,168,104,0.30) !important;
+  border: 1px solid rgba(0,255,136,0.30) !important;
   border-radius: 2px !important;
   font-family: var(--mono) !important;
   font-size: .69rem !important;
@@ -287,13 +287,13 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
   text-transform: uppercase;
 }}
 .stButton > button:hover {{
-  background: rgba(150,168,104,0.18) !important;
+  background: rgba(0,255,136,0.18) !important;
   border-color: var(--fg) !important;
   color: var(--acc) !important;
-  box-shadow: 0 0 10px rgba(150,168,104,.22), inset 0 0 6px rgba(150,168,104,.06);
+  box-shadow: 0 0 10px rgba(0,255,136,.22), inset 0 0 6px rgba(0,255,136,.06);
 }}
 .stButton > button:active {{
-  background: rgba(150,168,104,0.35) !important;
+  background: rgba(0,255,136,0.35) !important;
   color: #000 !important;
 }}
 
@@ -301,7 +301,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 .stTextInput input, .stNumberInput input, .stTextArea textarea {{
   background: rgba(5,20,10,0.70) !important;
   color: var(--fg) !important;
-  border: 1px solid rgba(150,168,104,0.22) !important;
+  border: 1px solid rgba(0,255,136,0.22) !important;
   border-radius: 2px !important;
   font-family: var(--mono) !important;
   font-size: .70rem !important;
@@ -309,7 +309,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 }}
 .stTextInput input:focus, .stNumberInput input:focus, .stTextArea textarea:focus {{
   border-color: var(--fg) !important;
-  box-shadow: 0 0 0 1px rgba(150,168,104,.18) !important;
+  box-shadow: 0 0 0 1px rgba(0,255,136,.18) !important;
   outline: none !important;
 }}
 .stTextInput label, .stNumberInput label, .stTextArea label,
@@ -325,7 +325,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 .stSelectbox > div > div,
 [data-baseweb="select"] > div {{
   background: rgba(5,20,10,0.72) !important;
-  border: 1px solid rgba(150,168,104,0.22) !important;
+  border: 1px solid rgba(0,255,136,0.22) !important;
   border-radius: 2px !important;
   color: var(--fg) !important;
   font-family: var(--mono) !important;
@@ -345,7 +345,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
   background: transparent !important;
 }}
 [role="option"]:hover, [aria-selected="true"] {{
-  background: rgba(150,168,104,.10) !important;
+  background: rgba(0,255,136,.10) !important;
   color: var(--acc) !important;
 }}
 
@@ -353,11 +353,11 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 [data-baseweb="slider"] [role="slider"] {{
   background: var(--fg) !important;
   border: none !important;
-  box-shadow: 0 0 8px rgba(150,168,104,.45) !important;
+  box-shadow: 0 0 8px rgba(0,255,136,.45) !important;
 }}
 [data-baseweb="slider"] div[class*="Track"],
 [data-baseweb="slider"] div[class*="track"] {{
-  background: rgba(150,168,104,.15) !important;
+  background: rgba(0,255,136,.15) !important;
 }}
 [data-testid="stSlider"] {{
   background: transparent !important;
@@ -366,7 +366,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 /* ─── CHECKBOXES ──────────────────────────────────────────────────────────── */
 .stCheckbox label {{ color: var(--fg) !important; }}
 .stCheckbox [role="checkbox"] {{
-  border: 1px solid rgba(150,168,104,.35) !important;
+  border: 1px solid rgba(0,255,136,.35) !important;
   background: rgba(5,20,10,.60) !important;
   border-radius: 1px !important;
   backdrop-filter: blur(6px) !important;
@@ -385,7 +385,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 }}
 [data-baseweb="tab"] {{
   background: transparent !important;
-  color: rgba(150,168,104,.35) !important;
+  color: rgba(0,255,136,.35) !important;
   font-family: var(--mono) !important;
   font-size: .61rem !important;
   letter-spacing: .08em;
@@ -398,8 +398,8 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
 [aria-selected="true"][data-baseweb="tab"] {{
   color: var(--fg) !important;
   border-bottom-color: var(--fg) !important;
-  background: rgba(150,168,104,.05) !important;
-  text-shadow: 0 0 8px rgba(150,168,104,.4);
+  background: rgba(0,255,136,.05) !important;
+  text-shadow: 0 0 8px rgba(0,255,136,.4);
 }}
 [data-baseweb="tab"]:hover {{ color: var(--acc) !important; }}
 
@@ -411,7 +411,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
   backdrop-filter: blur(10px) !important;
 }}
 .stDataFrame thead tr th {{
-  background: rgba(150,168,104,0.07) !important;
+  background: rgba(0,255,136,0.07) !important;
   color: var(--acc) !important;
   font-family: var(--mono) !important;
   font-size: .58rem !important;
@@ -424,10 +424,10 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
   color: var(--fg2) !important;
   font-family: var(--mono) !important;
   font-size: .61rem !important;
-  border-bottom: 1px solid rgba(150,168,104,.05) !important;
+  border-bottom: 1px solid rgba(0,255,136,.05) !important;
 }}
 .stDataFrame tbody tr:hover td {{
-  background: rgba(150,168,104,.05) !important;
+  background: rgba(0,255,136,.05) !important;
   color: var(--fg) !important;
 }}
 
@@ -444,7 +444,7 @@ section[data-testid="stSidebar"] > div {{ padding-top: 0 !important; }}
   text-transform: uppercase;
 }}
 .streamlit-expanderHeader:hover {{
-  background: rgba(150,168,104,.08) !important;
+  background: rgba(0,255,136,.08) !important;
   border-color: var(--bdr) !important;
 }}
 .streamlit-expanderContent {{
@@ -457,7 +457,7 @@ details > summary {{ color: var(--fg) !important; font-family: var(--mono) !impo
 
 /* ─── PROGRESS BARS ───────────────────────────────────────────────────────── */
 .stProgress > div > div {{
-  background: rgba(150,168,104,.12) !important;
+  background: rgba(0,255,136,.12) !important;
   border: 1px solid var(--bdr2) !important;
   border-radius: 1px !important;
 }}
@@ -515,7 +515,7 @@ code, pre, .stCodeBlock {{
   padding-bottom: .28rem;
   margin-bottom: .70rem;
   text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(150,168,104,.30);
+  text-shadow: 0 0 8px rgba(0,255,136,.30);
 }}
 .term-hdr-gold {{
   font-family: var(--mono);
@@ -533,7 +533,7 @@ code, pre, .stCodeBlock {{
 .t-lbl {{
   font-family: var(--mono);
   font-size: .60rem;
-  color: rgba(150,168,104,.45);
+  color: rgba(0,255,136,.45);
   letter-spacing: .11em;
   margin: .40rem 0 .15rem;
   text-transform: uppercase;
@@ -572,7 +572,7 @@ code, pre, .stCodeBlock {{
 }}
 .sbar-seg {{
   padding: 0 .60rem;
-  border-right: 1px solid rgba(150,168,104,.10);
+  border-right: 1px solid rgba(0,255,136,.10);
   white-space: nowrap;
   line-height: 1.6;
 }}
@@ -582,7 +582,7 @@ code, pre, .stCodeBlock {{
 .c-gold {{ color: var(--gold); text-shadow: 0 0 6px rgba(255,215,0,.4); }}
 .c-warn {{ color: var(--warn); }}
 .c-dng  {{ color: var(--dng); animation: blink-dng .7s step-end infinite; }}
-.c-dim  {{ color: rgba(150,168,104,.30); }}
+.c-dim  {{ color: rgba(0,255,136,.30); }}
 .c-purp {{ color: var(--purp); }}
 @keyframes blink-dng {{ 0%,100%{{opacity:1}} 50%{{opacity:.20}} }}
 
@@ -595,12 +595,12 @@ code, pre, .stCodeBlock {{
   letter-spacing: .28em;
   text-align: center;
   padding: .60rem 0 .04rem;
-  text-shadow: 0 0 30px rgba(150,168,104,.55), 0 0 70px rgba(150,168,104,.20);
+  text-shadow: 0 0 30px rgba(0,255,136,.55), 0 0 70px rgba(0,255,136,.20);
   animation: logo-pulse 4s ease-in-out infinite;
 }}
 @keyframes logo-pulse {{
-  0%,100% {{ text-shadow: 0 0 22px rgba(150,168,104,.45), 0 0 60px rgba(150,168,104,.15); }}
-  50%      {{ text-shadow: 0 0 55px rgba(150,168,104,.80), 0 0 120px rgba(150,168,104,.35); }}
+  0%,100% {{ text-shadow: 0 0 22px rgba(0,255,136,.45), 0 0 60px rgba(0,255,136,.15); }}
+  50%      {{ text-shadow: 0 0 55px rgba(0,255,136,.80), 0 0 120px rgba(0,255,136,.35); }}
 }}
 .sb-sub {{
   font-family: var(--mono);
@@ -615,7 +615,7 @@ code, pre, .stCodeBlock {{
 .sb-section {{
   font-family: var(--mono);
   font-size: .52rem;
-  color: rgba(150,168,104,.35);
+  color: rgba(0,255,136,.35);
   letter-spacing: .14em;
   text-transform: uppercase;
   margin: .42rem 0 .16rem .10rem;
@@ -628,7 +628,7 @@ code, pre, .stCodeBlock {{
   gap: .40rem;
   font-family: var(--mono);
   font-size: .66rem;
-  color: rgba(150,168,104,.50);
+  color: rgba(0,255,136,.50);
   letter-spacing: .05em;
   padding: .16rem .42rem;
   border-left: 2px solid transparent;
@@ -637,8 +637,8 @@ code, pre, .stCodeBlock {{
   transition: all .12s;
   text-transform: uppercase;
 }}
-.nav-item:hover {{ color: var(--acc); border-left-color: var(--acc); background: rgba(150,168,104,.04); }}
-.nav-item.active {{ color: var(--fg); border-left-color: var(--fg); background: rgba(150,168,104,.07); text-shadow: 0 0 6px rgba(150,168,104,.30); }}
+.nav-item:hover {{ color: var(--acc); border-left-color: var(--acc); background: rgba(0,255,136,.04); }}
+.nav-item.active {{ color: var(--fg); border-left-color: var(--fg); background: rgba(0,255,136,.07); text-shadow: 0 0 6px rgba(0,255,136,.30); }}
 
 /* ── BOOT SCREEN ─────────────────────────────────────────────────────────────── */
 .boot-wrap {{
@@ -653,7 +653,7 @@ code, pre, .stCodeBlock {{
   font-weight: 900;
   color: var(--fg);
   letter-spacing: .38em;
-  text-shadow: 0 0 80px rgba(150,168,104,.65), 0 0 160px rgba(150,168,104,.25);
+  text-shadow: 0 0 80px rgba(0,255,136,.65), 0 0 160px rgba(0,255,136,.25);
   text-align: center;
   margin-bottom: .10rem;
   animation: logo-pulse 4s ease-in-out infinite;
@@ -669,7 +669,7 @@ code, pre, .stCodeBlock {{
 .boot-sub2 {{
   font-family: var(--mono);
   font-size: .56rem;
-  color: rgba(150,168,104,.45);
+  color: rgba(0,255,136,.45);
   letter-spacing: .16em;
   text-align: center;
   margin-bottom: .55rem;
@@ -684,7 +684,7 @@ code, pre, .stCodeBlock {{
 .boot-log {{ width: 100%; max-width: 700px; }}
 .bl {{ font-family: var(--mono); font-size: .64rem; margin: .07rem 0; letter-spacing: .04em; line-height:1.5; }}
 .bl-hi  {{ color: var(--fg); }}
-.bl-dim {{ color: rgba(150,168,104,.28); }}
+.bl-dim {{ color: rgba(0,255,136,.28); }}
 .bl-acc {{ color: var(--acc); }}
 .bl-wr  {{ color: var(--warn); }}
 .bl-er  {{ color: var(--dng); }}
@@ -704,7 +704,7 @@ code, pre, .stCodeBlock {{
   border: 1px solid;
   text-transform: uppercase;
 }}
-.t-nom {{ color: var(--fg);   border-color: rgba(150,168,104,.30); background: rgba(150,168,104,.06); }}
+.t-nom {{ color: var(--fg);   border-color: rgba(0,255,136,.30); background: rgba(0,255,136,.06); }}
 .t-el  {{ color: var(--warn); border-color: rgba(255,140,0,.45); background: rgba(255,140,0,.07); }}
 .t-cr  {{ color: #ff4400;     border-color: rgba(255,68,0,.50);   background: rgba(255,68,0,.06);  }}
 .t-co  {{ color: var(--dng);  border-color: rgba(255,32,32,.60);  background: rgba(255,0,0,.08);
@@ -723,7 +723,7 @@ code, pre, .stCodeBlock {{
 .g-card-title {{
   font-family: var(--mono);
   font-size: .58rem;
-  color: rgba(150,168,104,.50);
+  color: rgba(0,255,136,.50);
   letter-spacing: .10em;
   text-transform: uppercase;
   margin-bottom: .28rem;
@@ -738,7 +738,7 @@ code, pre, .stCodeBlock {{
 .g-card-sub {{
   font-family: var(--mono);
   font-size: .54rem;
-  color: rgba(150,168,104,.38);
+  color: rgba(0,255,136,.38);
   letter-spacing: .06em;
   margin-top: .14rem;
 }}
@@ -828,7 +828,7 @@ code, pre, .stCodeBlock {{
 }}
 .email-body {{
   font-size: .63rem;
-  color: rgba(150,168,104,.55);
+  color: rgba(0,255,136,.55);
   letter-spacing: .04em;
   line-height: 1.5;
 }}
@@ -840,12 +840,12 @@ code, pre, .stCodeBlock {{
   gap: .50rem;
   font-family: var(--mono);
   font-size: .60rem;
-  color: rgba(150,168,104,.55);
-  border-bottom: 1px solid rgba(150,168,104,.05);
+  color: rgba(0,255,136,.55);
+  border-bottom: 1px solid rgba(0,255,136,.05);
   padding: .10rem .10rem;
   transition: background .10s;
 }}
-.sig-row:hover {{ background: rgba(150,168,104,.04); color: var(--fg); }}
+.sig-row:hover {{ background: rgba(0,255,136,.04); color: var(--fg); }}
 .sig-class {{ color: var(--acc); min-width: 100px; }}
 .sig-wow-hi {{ color: var(--dng); text-shadow: 0 0 6px rgba(255,32,32,.40); }}
 .sig-wow-md {{ color: var(--warn); }}
@@ -857,7 +857,7 @@ code, pre, .stCodeBlock {{
   justify-content: space-between;
   font-family: var(--mono);
   font-size: .60rem;
-  color: rgba(150,168,104,.45);
+  color: rgba(0,255,136,.45);
   padding: .07rem .10rem;
   line-height: 1.55;
 }}
@@ -893,7 +893,7 @@ code, pre, .stCodeBlock {{
 }}
 .pipe-arrow {{
   font-family: var(--mono);
-  color: rgba(150,168,104,.30);
+  color: rgba(0,255,136,.30);
   font-size: .68rem;
   margin: 0 .08rem;
 }}
@@ -904,8 +904,8 @@ code, pre, .stCodeBlock {{
   gap: .50rem;
   font-family: var(--mono);
   font-size: .60rem;
-  color: rgba(150,168,104,.45);
-  border-bottom: 1px solid rgba(150,168,104,.04);
+  color: rgba(0,255,136,.45);
+  border-bottom: 1px solid rgba(0,255,136,.04);
   padding: .10rem .15rem;
 }}
 .log-ln.C {{ color: var(--dng); }}
@@ -926,7 +926,7 @@ code, pre, .stCodeBlock {{
   text-transform: uppercase;
   letter-spacing: .04em;
 }}
-.mod-ok  {{ color: var(--fg);   border-color: rgba(150,168,104,.25); background: rgba(150,168,104,.06); }}
+.mod-ok  {{ color: var(--fg);   border-color: rgba(0,255,136,.25); background: rgba(0,255,136,.06); }}
 .mod-err {{ color: var(--dng);  border-color: rgba(255,32,32,.35);  background: rgba(255,0,0,.06);  }}
 
 /* ── ACHIEVEMENT BADGE ────────────────────────────────────────────────────────── */
@@ -944,12 +944,12 @@ code, pre, .stCodeBlock {{
 }}
 .ach-locked {{
   background: rgba(5,15,8,0.55);
-  border: 1px solid rgba(150,168,104,.08);
+  border: 1px solid rgba(0,255,136,.08);
   border-radius: 2px;
   padding: .35rem .55rem;
   font-family: var(--mono);
   font-size: .63rem;
-  color: rgba(150,168,104,.22);
+  color: rgba(0,255,136,.22);
   margin: .15rem 0;
   letter-spacing: .05em;
 }}
@@ -965,7 +965,7 @@ code, pre, .stCodeBlock {{
 .ov-cell-title {{
   font-family: var(--mono);
   font-size: .56rem;
-  color: rgba(150,168,104,.38);
+  color: rgba(0,255,136,.38);
   letter-spacing: .10em;
   text-transform: uppercase;
   margin-bottom: .22rem;
@@ -979,7 +979,7 @@ code, pre, .stCodeBlock {{
 .ov-cell-sub {{
   font-family: var(--mono);
   font-size: .55rem;
-  color: rgba(150,168,104,.35);
+  color: rgba(0,255,136,.35);
   margin-top: .12rem;
   letter-spacing: .05em;
 }}
@@ -1521,7 +1521,7 @@ def render_sidebar(B: Dict) -> str:
         em_sys = EmailSystem()
         uc = em_sys.unread_count()
         st.markdown(f"""
-        <div style="background:rgba(0,0,0,0.45);border:1px solid rgba(150,168,104,.12);
+        <div style="background:rgba(0,0,0,0.45);border:1px solid rgba(0,255,136,.12);
                     border-radius:2px;padding:.22rem .45rem;text-align:center;
                     font-family:var(--mono);font-size:.60rem;
                     backdrop-filter:blur(10px);margin-bottom:.32rem;">
@@ -1529,7 +1529,7 @@ def render_sidebar(B: Dict) -> str:
           &nbsp;&middot;&nbsp;
           <span style="color:var(--gold)">{pts:,}</span>&nbsp;PTS
           &nbsp;&middot;&nbsp;
-          <span style="color:{'var(--warn)' if uc>0 else 'rgba(150,168,104,.30)'}">
+          <span style="color:{'var(--warn)' if uc>0 else 'rgba(0,255,136,.30)'}">
           MAIL:{uc}</span>
         </div>
         """, unsafe_allow_html=True)
@@ -1644,7 +1644,7 @@ def render_sidebar(B: Dict) -> str:
             telem_html += _trow("DRIVES", str(inv.blank_drives),
                                  "telem-val" if inv.blank_drives > 2 else "telem-warn")
 
-        st.markdown(f'<div style="background:rgba(0,0,0,0.35);border:1px solid rgba(150,168,104,.08);'
+        st.markdown(f'<div style="background:rgba(0,0,0,0.35);border:1px solid rgba(0,255,136,.08);'
                     f'border-radius:2px;padding:.28rem .40rem;backdrop-filter:blur(8px);">'
                     f'{telem_html}</div>', unsafe_allow_html=True)
 
@@ -1663,13 +1663,13 @@ def render_sidebar(B: Dict) -> str:
         st.markdown('<hr class="sb-hr"/>', unsafe_allow_html=True)
         st.markdown("""
         <div style="font-family:var(--mono);font-size:.49rem;
-                    color:rgba(150,168,104,.28);text-align:center;line-height:1.9;
+                    color:rgba(0,255,136,.28);text-align:center;line-height:1.9;
                     padding:.10rem 0;">
           46.80°N · 8.10°E · 1840m ASL<br>
           H-I: 1420.405&thinsp;751&thinsp;768 MHz<br>
           Dr. Kel · ASO-DKL-01<br>
           <br>
-          <span style="color:rgba(150,168,104,.18)">
+          <span style="color:rgba(0,255,136,.18)">
           "Something is listening."</span>
         </div>
         """, unsafe_allow_html=True)
@@ -2131,15 +2131,15 @@ def render_overview(B: Dict) -> None:
                 wow_css = "sig-wow-hi" if wow>=8 else "sig-wow-md" if wow>=5 else "sig-wow-lo"
                 rows_html += (
                     f'<div class="sig-row">'
-                    f'<span style="color:rgba(150,168,104,.30);min-width:50px">{uid}</span>'
+                    f'<span style="color:rgba(0,255,136,.30);min-width:50px">{uid}</span>'
                     f'<span class="sig-class">{cls[:14]}</span>'
                     f'<span>SNR:<span style="color:var(--fg)">{snr:.0f}dB</span></span>'
                     f'<span>WoW:<span class="{wow_css}">{wow:.1f}</span></span>'
-                    f'<span style="color:rgba(150,168,104,.30)">{thr[:4]}</span>'
+                    f'<span style="color:rgba(0,255,136,.30)">{thr[:4]}</span>'
                     f'</div>')
             st.markdown(
                 f'<div class="t-lbl">Recent Signals (last 10)</div>'
-                f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(150,168,104,.08);'
+                f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(0,255,136,.08);'
                 f'border-radius:2px;padding:.12rem .25rem;max-height:220px;overflow-y:auto;">'
                 f'{rows_html}</div>',
                 unsafe_allow_html=True)
@@ -2164,10 +2164,10 @@ def render_overview(B: Dict) -> None:
                     f'<span style="flex:1;background:rgba(0,0,0,.35);height:8px;border-radius:1px;">'
                     f'<span style="display:block;width:{frac*100:.0f}%;height:100%;'
                     f'background:{col_b};border-radius:1px;"></span></span>'
-                    f'<span style="color:rgba(150,168,104,.45);min-width:30px">{cnt}</span>'
+                    f'<span style="color:rgba(0,255,136,.45);min-width:30px">{cnt}</span>'
                     f'</div>')
             st.markdown(
-                f'<div style="background:rgba(0,0,0,.35);border:1px solid rgba(150,168,104,.07);'
+                f'<div style="background:rgba(0,0,0,.35);border:1px solid rgba(0,255,136,.07);'
                 f'padding:.30rem .42rem;border-radius:2px;">{breakdown_html}</div>',
                 unsafe_allow_html=True)
 
@@ -2177,17 +2177,17 @@ def render_overview(B: Dict) -> None:
         rep_val = int(getattr(getattr(rep_mgr,"rep",None),"current",0)) if rep_mgr else 0
         tiers = [(-100,-50,"MEAN","var(--dng)"),
                  (-50, -10,"INCONVENIENT","var(--warn)"),
-                 (-10,  10,"NEUTRAL","rgba(150,168,104,.35)"),
+                 (-10,  10,"NEUTRAL","rgba(0,255,136,.35)"),
                  ( 10,  50,"GOOD","var(--fg2)"),
                  ( 50, 100,"LOYAL","var(--gold)")]
         tier_html = ""
         for lo,hi,name,col in tiers:
             active = lo <= rep_val < hi
             bg = col if active else "rgba(0,0,0,.25)"
-            fc = "rgba(0,0,0,.8)" if active else "rgba(150,168,104,.20)"
+            fc = "rgba(0,0,0,.8)" if active else "rgba(0,255,136,.20)"
             tier_html += (f'<div style="flex:1;text-align:center;background:{bg};'
                           f'color:{fc};font-family:var(--mono);font-size:.50rem;'
-                          f'padding:.14rem .05rem;border:1px solid rgba(150,168,104,.08);">{name}</div>')
+                          f'padding:.14rem .05rem;border:1px solid rgba(0,255,136,.08);">{name}</div>')
         st.markdown(
             f'<div style="display:flex;gap:1px;margin:.18rem 0 .10rem;">{tier_html}</div>'
             f'<div style="font-family:var(--mono);font-size:.65rem;color:var(--acc);'
@@ -2335,10 +2335,10 @@ def render_overview(B: Dict) -> None:
                         f'<span class="c-dim" style="min-width:38px">{ts}</span>'
                         f'<span class="{sc}" style="min-width:26px">[{sev[:1]}]</span>'
                         f'<span class="c-dim" style="min-width:36px">{cat}</span>'
-                        f'<span style="color:rgba(150,168,104,.55)">{msg}</span>'
+                        f'<span style="color:rgba(0,255,136,.55)">{msg}</span>'
                         f'</div>')
                 st.markdown(
-                    f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(150,168,104,.07);'
+                    f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(0,255,136,.07);'
                     f'border-radius:2px;padding:.12rem .25rem;max-height:220px;overflow-y:auto;">'
                     f'{log_html}</div>', unsafe_allow_html=True)
         else:
@@ -2356,17 +2356,17 @@ def render_overview(B: Dict) -> None:
                 sev_name = sev.name if sev and hasattr(sev,"name") else "INFO"
                 sev_col  = ("var(--dng)" if sev_name in ("HORROR","CRITICAL")
                              else "var(--warn)" if sev_name == "WARNING"
-                             else "rgba(150,168,104,.40)")
+                             else "rgba(0,255,136,.40)")
                 ev_html += (
                     f'<div style="font-family:var(--mono);font-size:.60rem;'
-                    f'border-bottom:1px solid rgba(150,168,104,.04);'
+                    f'border-bottom:1px solid rgba(0,255,136,.04);'
                     f'padding:.10rem .14rem;display:flex;gap:.42rem;">'
                     f'<span style="color:{sev_col};min-width:44px">[{sev_name[:4]}]</span>'
-                    f'<span style="color:rgba(150,168,104,.32);min-width:52px">{cat}</span>'
-                    f'<span style="color:rgba(150,168,104,.52)">{title}</span>'
+                    f'<span style="color:rgba(0,255,136,.32);min-width:52px">{cat}</span>'
+                    f'<span style="color:rgba(0,255,136,.52)">{title}</span>'
                     f'</div>')
             st.markdown(
-                f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(150,168,104,.07);'
+                f'<div style="background:rgba(0,0,0,.38);border:1px solid rgba(0,255,136,.07);'
                 f'border-radius:2px;padding:.10rem .20rem;max-height:220px;overflow-y:auto;">'
                 f'{ev_html}</div>', unsafe_allow_html=True)
         else:
@@ -2448,8 +2448,8 @@ def render_emails() -> None:
             st.markdown(
                 f'<div style="font-family:var(--mono);font-size:.62rem;'
                 f'display:flex;justify-content:space-between;'
-                f'border-bottom:1px solid rgba(150,168,104,.06);padding:.08rem .10rem;">'
-                f'<span style="color:rgba(150,168,104,.45)">{sat_name}</span>'
+                f'border-bottom:1px solid rgba(0,255,136,.06);padding:.08rem .10rem;">'
+                f'<span style="color:rgba(0,255,136,.45)">{sat_name}</span>'
                 f'<span style="color:var(--acc)">{h}</span>'
                 f'</div>', unsafe_allow_html=True)
 
@@ -2550,10 +2550,10 @@ Total points                        : {_get("total_points",0):,}
             st.markdown(
                 f'<div style="font-family:var(--mono);font-size:.60rem;'
                 f'display:flex;gap:.45rem;padding:.08rem .10rem;'
-                f'border-bottom:1px solid rgba(150,168,104,.04);">'
+                f'border-bottom:1px solid rgba(0,255,136,.04);">'
                 f'<span class="{css}">{sym}</span>'
                 f'<span class="c-dim" style="min-width:36px">D{d:02d}</span>'
-                f'<span style="color:{_PAL["fg"] if active else "rgba(150,168,104,.30)"}">{desc}</span>'
+                f'<span style="color:{_PAL["fg"] if active else "rgba(0,255,136,.30)"}">{desc}</span>'
                 f'</div>', unsafe_allow_html=True)
 
         st.markdown('<hr class="sb-hr"/>', unsafe_allow_html=True)
@@ -2570,9 +2570,9 @@ Total points                        : {_get("total_points",0):,}
         for name, col, desc in entities:
             st.markdown(
                 f'<div style="font-family:var(--mono);font-size:.59rem;'
-                f'padding:.10rem .12rem;border-bottom:1px solid rgba(150,168,104,.04);">'
+                f'padding:.10rem .12rem;border-bottom:1px solid rgba(0,255,136,.04);">'
                 f'<span style="color:{col};font-weight:bold">{name}</span>'
-                f'<span style="color:rgba(150,168,104,.38)"> — {desc}</span>'
+                f'<span style="color:rgba(0,255,136,.38)"> — {desc}</span>'
                 f'</div>', unsafe_allow_html=True)
 
         st.markdown('<hr class="sb-hr"/>', unsafe_allow_html=True)
