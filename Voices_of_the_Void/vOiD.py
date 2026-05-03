@@ -99,19 +99,19 @@ _BG_URI: Optional[str] = _load_bg_b64()
 # All our custom widgets are glass/transparent so bg image shows through.
 # ─────────────────────────────────────────────────────────────────────────────
 _PAL = dict(
-    fg      = "#00ff88",    # phosphor green
-    fg2     = "#00cc6a",    # dimmer green
-    dim     = "#0d2e1a",    # very dim surface
-    acc     = "#00ffcc",    # cyan accent
+    fg      = "#96a868",    # earthy lichen green (was #00ff88)
+    fg2     = "#7a8a52",    # dimmer lichen (was #00cc6a)
+    dim     = "#1a1e14",    # very dim earthy surface (was #0d2e1a)
+    acc     = "#c2b878",    # anomalous bone/sand accent (was #00ffcc)
     gold    = "#ffd700",    # ARIRAL gold
     warn    = "#ff8c00",    # warning orange
     dng     = "#ff2020",    # danger red
     purp    = "#9955ff",    # void purple
     blue    = "#0099ff",    # data blue
-    glass   = "rgba(10,22,15,0.68)",   # glass panel bg
-    glass2  = "rgba(5,15,8,0.82)",     # darker glass
-    border  = "rgba(0,255,136,0.18)",  # ghost border
-    border2 = "rgba(0,255,136,0.08)",  # even lighter border
+    glass   = "rgba(22,25,18,0.68)",     # earthy glass panel bg
+    glass2  = "rgba(14,16,12,0.82)",     # darker earthy glass
+    border  = "rgba(150,168,104,0.18)",  # ghost border 
+    border2 = "rgba(150,168,104,0.08)",  # even lighter border
 )
 
 # ─────────────────────────────────────────────────────────────────────────────
