@@ -15,8 +15,3 @@ scikit-learn>=1.4.0
 plotly>=5.20.0
 matplotlib>=3.8.0
 
-# --- Utilities ---
-# For cryptographic submission and station telemetry
-
-requests>=2.31.0
-
