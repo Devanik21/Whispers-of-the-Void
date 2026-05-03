@@ -2051,13 +2051,17 @@ def render_overview(B: Dict) -> None:
         if wx:
             rq = wx.radio_seeing_factor
             atm = wx.atmospheric_noise_k
+            
+            # Extract conditional HTML to avoid backslashes inside the f-string expression
+            lightning_html = '&nbsp;<span style="color:var(--dng)">⚡ LIGHTNING</span>' if wx.lightning_active else ''
+            
             st.markdown(
                 f'<div class="ov-cell">'
                 f'<div class="ov-cell-title">Weather & Atmosphere</div>'
                 f'<span style="color:var(--acc)">{wx.state.value}</span>'
                 f'  {wx.temperature_c:.1f}°C · wind {wx.wind_speed_ms:.1f} m/s<br>'
                 f'RADIO-Q {_mini_gauge(rq)} {rq:.2f}'
-                f'{"&nbsp;<span style=\\"color:var(--dng)\\">⚡ LIGHTNING</span>" if wx.lightning_active else ""}'
+                f'{lightning_html}'
                 f'<div class="ov-cell-sub">Atm noise: {atm:.1f} K'
                 f' · Precip: {wx.precipitation_mm_h:.1f} mm/h'
                 f' · Vis: {wx.visibility_km:.1f} km</div>'
