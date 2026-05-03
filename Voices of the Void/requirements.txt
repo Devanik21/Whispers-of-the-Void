@@ -8,10 +8,7 @@ pandas>=2.2.0
 
 # --- ML & Anomaly Detection (ml_predictor / anomaly_detector) ---
 scikit-learn>=1.4.0
-# Using lightweight boosting for temporal forecasting
-lightgbm>=4.3.0
-# SHAP for ml_predictor attribution
-shap>=0.45.0
+
 
 # --- Visualization ---
 # Essential for waterfall and SETI scoring plots
@@ -20,6 +17,6 @@ matplotlib>=3.8.0
 
 # --- Utilities ---
 # For cryptographic submission and station telemetry
-cryptography>=42.0.0
+
 requests>=2.31.0
 python-dotenv>=1.0.0
