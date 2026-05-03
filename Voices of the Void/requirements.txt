@@ -19,4 +19,4 @@ matplotlib>=3.8.0
 # For cryptographic submission and station telemetry
 
 requests>=2.31.0
-python-dotenv>=1.0.0
+
