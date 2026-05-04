@@ -504,6 +504,19 @@ code, pre, .stCodeBlock {{
 
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 #MainMenu, header, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
+/* Force the toggle button to the top and protect its font */
+[data-testid="collapsedControl"] {{
+  visibility: visible !important;
+  z-index: 10000 !important;
+  color: var(--fg) !important;
+  background: rgba(14,16,12,0.85) !important; /* Slight earthy background so it doesn't get lost */
+  border-radius: 4px !important;
+}}
+
+[data-testid="collapsedControl"] span, 
+[data-testid="collapsedControl"] svg {{
+  font-family: "Material Symbols Rounded", "Material Icons" !important;
+}}
 
 /* ════════════════════════════════════════════════════════════════════════════
    CUSTOM COMPONENT CLASSES
