@@ -499,9 +499,7 @@ code, pre, .stCodeBlock {{
 .stSpinner > div {{ border-top-color: var(--fg) !important; }}
 
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-/* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-/* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-#MainMenu, footer, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
+#MainMenu, header, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
 
 /* ════════════════════════════════════════════════════════════════════════════
    CUSTOM COMPONENT CLASSES
