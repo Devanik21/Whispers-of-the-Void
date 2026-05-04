@@ -161,6 +161,11 @@ def _build_css(bg_uri: Optional[str]) -> str:
   --body:    'Rajdhani','Share Tech Mono',sans-serif;
 }}
 
+/* ─── RESTORE STREAMLIT ICONS ────────────────────────────────────────────── */
+.stApp span[class*="material"] {{
+  font-family: "Material Symbols Rounded", "Material Icons" !important;
+}}
+
 /* ─── LAYER 0 ─ background ──────────────────────────────────────────────── */
 html, body,
 [data-testid="stAppViewContainer"],
