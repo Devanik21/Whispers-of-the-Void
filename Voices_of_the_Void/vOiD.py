@@ -212,10 +212,9 @@ h1,h2,h3,h4,h5,h6 {{
 
 /* ─── SIDEBAR ─────────────────────────────────────────────────────────────  */
 [data-testid="stSidebar"] {{
-  background: {_PAL['glass2']} !important;
+  background: transparent !important;
   border-right: 1px solid var(--bdr) !important;
-  backdrop-filter: blur(18px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+
 }}
 [data-testid="stSidebar"] * {{
   font-family: var(--mono) !important;
