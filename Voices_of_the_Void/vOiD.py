@@ -500,8 +500,8 @@ code, pre, .stCodeBlock {{
 
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
+/* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 #MainMenu, footer, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
-header {{ background: transparent !important; }}
 
 /* ════════════════════════════════════════════════════════════════════════════
    CUSTOM COMPONENT CLASSES
