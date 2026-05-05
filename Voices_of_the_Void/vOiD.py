@@ -503,7 +503,7 @@ code, pre, .stCodeBlock {{
 .stSpinner > div {{ border-top-color: var(--fg) !important; }}
 
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-#MainMenu, header, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
+# header, [data-testid="stToolbar"] {{ visibility: hidden !important; }}
 /* Force the toggle button to the top and protect its font */
 [data-testid="collapsedControl"] {{
   visibility: visible !important;
