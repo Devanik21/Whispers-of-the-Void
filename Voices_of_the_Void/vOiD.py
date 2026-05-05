@@ -1971,7 +1971,7 @@ def render_boot(B: Dict) -> None:
 .doc-block {
     font-family: 'Share Tech Mono','Courier New',monospace;
     font-size: .63rem;
-    color: rgba(0,255,136,0.55);
+    color: rgba(0,255,136,0.50);
     line-height: 1.75;
     letter-spacing: .04em;
     background: transparent;
@@ -1993,7 +1993,7 @@ def render_boot(B: Dict) -> None:
 .doc-warn{ color: #ff8c00; }
 .doc-dng { color: #ff2020; }
 .doc-purp{ color: #9955ff; }
-.doc-dim { color: rgba(0,255,136,0.55); }
+.doc-dim { color: rgba(0,255,136,0.50); }
 .doc-code{
     font-family: 'Share Tech Mono','Courier New',monospace;
     font-size: .60rem;
