@@ -505,7 +505,7 @@ code, pre, .stCodeBlock {{
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-#MainMenu, [data-testid="stToolbar"], .viewerBadge_container {{ display: none !important; }}
+# [data-testid="stToolbar"], .viewerBadge_container {{ display: none !important; }}
 header {{  
   background: transparent !important; 
 }}
