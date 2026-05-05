@@ -1964,6 +1964,434 @@ def render_boot(B: Dict) -> None:
   </div>
 </div>
 """, unsafe_allow_html=True)
+    # ── Collapsed documentation panel below boot screen ──────────────────
+    with st.expander("[ TECHNICAL DOCUMENTATION & SYSTEM REFERENCE — CLICK TO EXPAND ]", expanded=False):
+        st.markdown("""
+<style>
+.doc-block {
+    font-family: 'Share Tech Mono','Courier New',monospace;
+    font-size: .63rem;
+    color: rgba(0,255,136,0.55);
+    line-height: 1.75;
+    letter-spacing: .04em;
+    background: transparent;
+    padding: .20rem 0;
+}
+.doc-section {
+    font-family: 'Share Tech Mono','Courier New',monospace;
+    font-size: .68rem;
+    color: #00ffcc;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0,255,136,0.15);
+    padding-bottom: .18rem;
+    margin: .80rem 0 .35rem;
+}
+.doc-hi  { color: #00ff88; }
+.doc-acc { color: #00ffcc; }
+.doc-gold{ color: #ffd700; }
+.doc-warn{ color: #ff8c00; }
+.doc-dng { color: #ff2020; }
+.doc-purp{ color: #9955ff; }
+.doc-dim { color: rgba(0,255,136,0.28); }
+.doc-code{
+    font-family: 'Share Tech Mono','Courier New',monospace;
+    font-size: .60rem;
+    color: #00ffcc;
+    background: rgba(0,0,0,0.40);
+    border: 1px solid rgba(0,255,136,0.12);
+    border-radius: 2px;
+    padding: .30rem .50rem;
+    margin: .22rem 0;
+    display: block;
+    white-space: pre;
+    overflow-x: auto;
+}
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Share Tech Mono','Courier New',monospace;
+    font-size: .60rem;
+}
+.doc-table th {
+    color: #00ffcc;
+    text-align: left;
+    padding: .12rem .40rem;
+    border-bottom: 1px solid rgba(0,255,136,0.18);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    background: rgba(0,255,136,0.05);
+}
+.doc-table td {
+    color: rgba(0,255,136,0.55);
+    padding: .10rem .40rem;
+    border-bottom: 1px solid rgba(0,255,136,0.05);
+    vertical-align: top;
+}
+.doc-table td:first-child { color: #00ff88; min-width: 160px; }
+.doc-table tr:hover td { background: rgba(0,255,136,0.03); }
+</style>
+
+<div class="doc-block">
+
+<div class="doc-section">▸ SYSTEM IDENTITY</div>
+<span class="doc-hi">ASO-DUNKELTALER-01</span> is a deep-space signal monitoring station
+operated by an unnamed research company, situated at <span class="doc-acc">46.80°N 8.10°E 1840 m ASL</span>
+in the Dunkeltaler Forest, Swiss Alps.  The operator, <span class="doc-gold">Dr. Kel</span>,
+is a recent hire with an unknown security clearance level.
+
+Primary mission  : Locate, acquire, classify, and submit radio signals of interest.<br>
+Secondary mission: Maintain equipment. File drive hashes. Do not interact with neighbours.<br>
+Tertiary mission : <span class="doc-warn">Undisclosed.</span>
+
+<div class="doc-section">▸ RADIO FREQUENCY REFERENCE</div>
+<table class="doc-table">
+<tr><th>Line / Frequency</th><th>Value (MHz)</th><th>Significance</th></tr>
+<tr><td>Hydrogen 21 cm (H-I)</td><td>1420.405 751 768</td><td>The Water Hole lower bound. Universal SETI beacon frequency. Natural emission from neutral hydrogen. Used by VotV as the primary tuning reference.</td></tr>
+<tr><td>OH radical (1612)</td><td>1612.231</td><td>Hydroxyl maser. Circumstellar envelopes. Water Hole band.</td></tr>
+<tr><td>OH main line (1665)</td><td>1665.4018</td><td>OH maser. Star-forming regions. Water Hole band.</td></tr>
+<tr><td>OH main line (1667)</td><td>1667.3590</td><td>Strongest OH transition. Water Hole upper boundary.</td></tr>
+<tr><td>OH satellite (1720)</td><td>1720.5300</td><td>Supernova remnant masers. Water Hole.</td></tr>
+<tr><td>Water maser</td><td>22 235.0800</td><td>22 GHz water vapour maser. Dense star-forming cores.</td></tr>
+<tr><td>Methanol maser</td><td>6 668.5192</td><td>Class II methanol. High-mass star formation tracers.</td></tr>
+<tr><td>ARIRAL carrier (est.)</td><td>1420.405 ± ε</td><td><span class="doc-gold">Prime-encoded offset from H-I rest frequency. Detected on Day 8+. Non-terrestrial origin confirmed.</span></td></tr>
+</table>
+
+<div class="doc-section">▸ SIGNAL CLASSIFICATION TAXONOMY</div>
+<table class="doc-table">
+<tr><th>Class</th><th>Base Pts</th><th>Description</th><th>Action Required</th></tr>
+<tr><td>NARROWBAND_CW</td><td>50</td><td>Continuous-wave narrowband. Most common class. Natural or artificial origin possible. Bandwidth typically &lt; 1 Hz. Primary SETI candidate type (cf. WoW! signal, 1977).</td><td>Log. Submit to HQ.</td></tr>
+<tr><td>NARROWBAND_PULSED</td><td>75</td><td>Periodic narrowband bursts. Duty cycle &lt; 30%. May indicate rotating source or deliberate pulsing. Autocorrelation peak &gt; 0.6 typical.</td><td>Log. Measure period.</td></tr>
+<tr><td>PULSAR</td><td>200</td><td>Rotating neutron star. Millisecond to multi-second periods. High DM (dispersion measure). Gold standard astrophysical verification. Known Crab period: 33.102 ms.</td><td>Fold and confirm. Cite catalog.</td></tr>
+<tr><td>CHIRP</td><td>100</td><td>Linear frequency sweep. Planetary radar, ionospheric reflection, or structured FRB echo. Drift rate key discriminant. Natural: no drift pattern.</td><td>Measure sweep rate.</td></tr>
+<tr><td>BROADBAND_BURST</td><td>180</td><td>Fast Radio Burst (FRB) archetype. Millisecond duration. High DM implies extragalactic origin. Scattering tail diagnostic. Some FRBs repeat; most do not.</td><td>Measure DM. Check repeat.</td></tr>
+<tr><td>STRUCTURED_BPSK</td><td>300</td><td>Binary Phase-Shift Keying. Data-bearing signal. IC ≈ 0.038 (near-random bit stream). Elevated threat. May contain decodable content. Non-terrestrial BPSK is a Tier-1 SETI event.</td><td>Decode. Escalate.</td></tr>
+<tr><td>STRUCTURED_FSK</td><td>280</td><td>Frequency-Shift Keying. Two-tone data modulation. Common in legacy telemetry. If source is unresolved and DM &gt; 0: escalate immediately.</td><td>Measure deviation. Decode.</td></tr>
+<tr><td>ASTROPHYSICAL_LINE</td><td>120</td><td>Spectral emission or absorption line. Narrow (sub-Hz natural linewidth, Doppler-broadened). Maps to known molecular transitions. Radial velocity extraction possible.</td><td>Match catalog. Measure vrad.</td></tr>
+<tr><td>ANOMALOUS</td><td>400</td><td>Cannot be classified by ensemble ML. Fractal FM, low Kolmogorov complexity, non-stationary. Higuchi FD &lt; 1.5. Prime encoding possible. Review immediately.</td><td>Manual decode. Anomaly pipeline.</td></tr>
+<tr><td>ARIRAL</td><td>800</td><td><span class="doc-gold">Non-human extraterrestrial. Prime-sequence encoded. Fibonacci word structure detected. WoW factor typically &gt; 6. Increases ARIRAL reputation +5 on detection. Favourite food: shrimp.</span></td><td>Decode. Submit. Do NOT delete.</td></tr>
+<tr><td>VOID_CARRIER</td><td class="doc-dng">0</td><td><span class="doc-dng">RESTRICTED. THE END IS NEAR class. Prime-encoded with Fibonacci embedding. WoW = 9–10. No noise. Suspiciously clean waveform. Game over if processed to Level 3 without deletion.</span></td><td><span class="doc-dng">DELETE ALL COPIES. ERASE DRIVE. DO NOT SUBMIT.</span></td></tr>
+</table>
+
+<div class="doc-section">▸ WoW FACTOR SCORING ALGORITHM</div>
+The WoW factor (0–10 scale) replicates the significance score used by Dr. Jerry Ehman when
+annotating the 1977 Big Ear observation. Each dimension contributes independently:
+
+<span class="doc-code">WoW = SNR_score(2.5) + BW_score(1.5) + WaterHole_score(1.5)
+         + Drift_score(1.0) + Purity_score(1.0) + Anomaly_bonus(1.5)
+         + DM_score(0.5)    [max = 10.0]
+
+SNR_score      = min(2.5,  SNR_dB / 30.0 × 2.5)
+BW_score       = 1.5 × max(0, 1 − BW_Hz / 10000)
+WaterHole      = 1.5 × max(0, 1 − dist_from_WH / 50 MHz)
+Drift_score    = 1.0 if 0.001 < |drift| < 0.4 Hz/s else 0.5 if < 2 Hz/s else 0.1
+Purity_score   = 1.0 × (1 − spectral_flatness)
+Anomaly_bonus  = 1.5 if class in {ANOMALOUS, ARIRAL, VOID_CARRIER}
+DM_score       = min(0.5, DM / 100 × 0.5)
+</span>
+
+Signals with WoW ≥ 7.0 trigger the <span class="doc-gold">EXTRAORDINARY SIGNAL</span> achievement
+and earn ×4.0 point multiplier. WoW ≥ 8.0 triggers HQ PRIORITY_ESCALATE response.
+
+<div class="doc-section">▸ ARIRAL SPECIES — TECHNICAL DOSSIER</div>
+<span class="doc-gold">Origin</span>    : Unknown stellar system. Ships are long, slender, pyramid-shaped
+             (tetrahedra). Active cloaking confirmed — both individual and craft.<br>
+<span class="doc-gold">Technology</span>: Energy-based weaponry. Warp signatures detectable as two-point
+             geometric anomalies on radar. Arrive in pairs (Day 8: X:-177 / Y:-510).<br>
+<span class="doc-gold">Behaviour</span>  : Non-aggressive by default. Will prank operators. Will retrieve
+             stolen items by force. Do NOT steal the Space Heater.<br>
+<span class="doc-gold">Comms</span>      : Prime-number frequency encoding. Known phrases decoded via
+             Fibonacci word substitution and prime-sequence mapping.<br>
+<span class="doc-gold">Diet</span>       : Shrimp. Exclusively. Large quantities. Empty containers
+             found throughout the forest indicate prior visitation.<br>
+<span class="doc-gold">Reputation</span> : -100 (MEAN) → -50 (INCONVENIENT) → 0 (NEUTRAL) →
+             +50 (GOOD) → +100 (LOYAL). 50-point tiers. Each tier unlocks
+             signal value multipliers, gift probability, and reduced hostile events.
+
+<table class="doc-table">
+<tr><th>Tier</th><th>Range</th><th>Value Mult</th><th>Gift Chance</th><th>Effects</th></tr>
+<tr><td>MEAN</td><td>[-100, -50)</td><td>×0.5</td><td>0%</td><td>Active hostility. Arirals hunt player. Signal values halved.</td></tr>
+<tr><td>INCONVENIENT</td><td>[-50, -10)</td><td>×0.8</td><td>0%</td><td>Passive avoidance. Occasional pranks. Rock throwing.</td></tr>
+<tr><td>NEUTRAL</td><td>[-10, +10)</td><td>×1.0</td><td>2%</td><td>Default state. Arirals observe from distance. Baseline behaviour.</td></tr>
+<tr><td>GOOD</td><td>[+10, +50)</td><td>×1.3</td><td>8%</td><td>Arirals leave shrimp packs after sleep. Commendation from HQ.</td></tr>
+<tr><td>LOYAL</td><td>[+50, +100]</td><td>×1.6</td><td>15%</td><td>Full ally. Stop eating player's shrimp. Maximum HQ bonus multiplier.</td></tr>
+</table>
+
+<div class="doc-section">▸ BACKEND MODULE TECHNICAL REFERENCE</div>
+
+<span class="doc-hi">1. signal_engine.py</span> — Signal Acquisition & Processing Console
+<span class="doc-dim">   Classes    : SignalRecord, SignalGenerator, DSPEngine, SignalClassifier,
+              DriveManager, Drive
+   Key fns    : signal_engine_page(), init_session_state(), compute_wow_factor(),
+              _generate_for_class(), _assess_threat(), _infer_origin()
+   Algorithm  : Ensemble ML (RF 50% + GB 30% + SVM 20%) trained on 40-feature
+              vectors. Features: envelope stats, phase, spectral, autocorrelation,
+              Higuchi FD, Lempel-Ziv complexity, Fibonacci R², prime power ratio.
+   Output     : SignalRecord → DriveManager → session_state.signal_log</span>
+
+<span class="doc-hi">2. spectral_analyzer.py</span> — Deep Spectral Analysis Engine
+<span class="doc-dim">   Classes    : SpectralAnalyzer, DynamicSpectrum, PulsarFit, DopplerAnalysis,
+              SETICandidate, SpectralVisualizer
+   Key fns    : spectral_analyzer_page(), calibrated_fft(), build_dynamic_spectrum(),
+              compute_doppler_analysis(), period_search_ffa(), score_seti_candidate(),
+              incoherent_dedispersion()
+   Physics    : Ruze formula for surface accuracy, Gardner clock recovery,
+              Lomb-Scargle periodogram, RAPS conformal prediction, Bayesian
+              7-discriminant SETI scoring, Stokes I/Q/U/V polarimetry.
+   Catalog    : 15 known pulsars (Crab, Vela, B1919+21, J0437-4715…),
+              12 spectral lines (H-I, OH 1612/1665/1667/1720, H2O, CH3OH…)</span>
+
+<span class="doc-hi">3. anomaly_detector.py</span> — Anomaly Detection & Threat Assessment
+<span class="doc-dim">   Classes    : AnomalyFeatureExtractor, EnsembleAnomalyDetector, ChangepointDetector,
+              StructuralPatternTester, EntityClassifier, AriralReputationManager,
+              AnomalyPipeline, AnomalyVisualizer
+   Algorithms : Isolation Forest (IF) + Local Outlier Factor (LOF) + One-Class SVM +
+              MinCovDet (Mahalanobis). Weighted ensemble: 35/25/25/15%.
+              CUSUM, PELT, Bayesian Online changepoint detection.
+              Prime frequency binomial test, Fibonacci KS test,
+              Higuchi FD, Sample Entropy, Lempel-Ziv 76 complexity.
+   Entities   : ARIRAL, RUFUS, INSOMNIAC, GHOST_DEER, LOOKER, BAD_SUN, THE_END.
+              Classified by WoW range, anomaly score, prime p-value, Fib R², periodicity.</span>
+
+<span class="doc-hi">4. ml_predictor.py</span> — Machine Learning Prediction Engine
+<span class="doc-dim">   Classes    : MasterPredictor, SyntheticDataFactory, BayesianHPO, ModelFactory,
+              ConformalPredictor, FeatureAttributor, TemporalForecaster,
+              ActiveLearner, ModelDriftDetector
+   Models     : RF, HistGBT, ExtraTrees, MLP, SVM-RBF, Logistic, Stacking, Voting.
+   HPO        : Gaussian Process surrogate + Expected Improvement acquisition.
+              20 iterations, 6 random init, 3-fold CV.
+   Conformal  : RAPS (Regularised Adaptive Prediction Sets), alpha=0.10.
+              Guaranteed marginal coverage (1-alpha) = 90%.
+   SHAP       : Kernel SHAP approximation, 100-coalition sampling,
+              Shapley-kernel weighted least squares.
+   Forecast   : AR(p) Yule-Walker + ARIMA(p,1,0) + Holt ETS + Kalman LL.
+              AIC-weighted ensemble, 80% and 95% prediction intervals.</span>
+
+<span class="doc-hi">5. environment_monitor.py</span> — Observatory Environment & Systems
+<span class="doc-dim">   Classes    : DishHealth, PowerSystem, Inventory, SleepRecord, StationLog,
+              WeatherSimulator, RandomEventEngine, SignalQualityCalculator,
+              AstronomicalCalc, EnvironmentVisualizer
+   Physics    : Ruze aperture efficiency, pointing error Gaussian beam model,
+              VSWR mismatch loss, cable thermal noise, LNA noise figure.
+              Solar position: NOAA simplified algorithm + equation of time.
+              Galactic noise: T_gal ≈ 17.1 × (f/408)^{-2.75} K.
+              Ionospheric scintillation: dawn/dusk + equinox seasonal model.
+   Weather    : 5-state Markov chain (CLEAR/PARTLY/OVERCAST/FOG/STORM).
+              500-sample MC forecast, physically consistent parameter generation.
+   Events     : 30+ random events across 5 categories (equipment/power/env/anomalous/personal).
+              Poisson arrival rate modulated by game state.
+   Fatigue    : Hours awake threshold: RESTED&lt;20, TIRED&lt;28, EXHAUSTED&lt;36, DELIRIOUS≥36.
+              Observation error factor: 1.0 / 0.9 / 0.7 / 0.45.
+              Hallucination probability: up to 80% after 36h awake.</span>
+
+<span class="doc-hi">6. hq_reporter.py</span> — HQ Reporting & Data Submission
+<span class="doc-dim">   Classes    : ArchiveManager, DriveSubmissionPackage, HQProtocol, AchievementSystem,
+              ScoringEngine, ReportGenerator, Leaderboard
+   Protocol   : HMAC-SHA256 record integrity (SECRET_KEY). Drive hash via sorted-UID
+              HMAC. Package hash: metadata HMAC. Reed-Solomon 25% overhead modelled.
+              Compression ratio: 0.45 (gzip estimate). Uplink: 128 kbps satellite.
+   Scoring    : base_pts × WoW_mult × SNR_bonus × novelty_bonus × rep_mult × integrity.
+              WoW multipliers: ×1.0 / ×1.5 / ×2.5 / ×4.0 / ×8.0 per tier.
+   HQ codes   : ACK_CLEAN, ACK_WITH_WARNINGS, REJECT_INTEGRITY, REJECT_DUPLICATE,
+              REJECT_VOID_CONT, PRIORITY_ESCALATE, ARIRAL_COMMEND.
+   Achievements: 14 badges. FIRST_SIGNAL, WOW_7_PLUS, PULSAR_CONFIRMED,
+              ARIRAL_FRIENDLY, ARIRAL_ALLIED, DRIVE_STREAK_5, ANOMALY_HUNTER,
+              NIGHT_OWL (03:33), VOID_ERASED, LOOKER_SURVIVED, PERFECT_DRIVE,
+              CENTURY_SIGNALS, WEEK_SURVIVAL, HYDROGEN_LINE_EXACT.</span>
+
+<span class="doc-hi">7. crypto_decoder.py</span> — Cryptography & Message Decoding Engine
+<span class="doc-dim">   Classes    : BinaryExtractor, MorseDecoder, ASCIIDeframer, PrimeSequenceDecoder,
+              CipherAnalyser, BaseEncodingDetector, EntropyDecomposer,
+              LinguisticAnalyser, RLEAnalyser, MasterDecoder, CryptoVisualizer
+   Extraction : ASK threshold + Gardner clock recovery. Zero-crossing BPSK.
+              Spectral LSB steganography from waterfall power matrix.
+              Automatic bit-rate detection via envelope autocorrelation.
+   Ciphers    : Caesar (26-shift brute force), Vigenère (Friedman IC + per-column
+              frequency analysis), XOR (Hamming distance key length + frequency byte).
+              Base16/32/64/URL-safe detection and decoding.
+   ARIRAL     : 30 prime symbols mapped to ◈⊕◉△▽◇⬡⬢⊙⊛◎⊜⊝…
+              12 known phrases. Fibonacci word density test (expected φ⁻¹≈0.618).
+              Prime-frequency binomial test (H0: uniform bin distribution).
+   Entropy    : Byte-level H, bit-level H, block variance, byte correlation,
+              Lempel-Ziv rolling complexity. Classification:
+              &gt;7.8 bits = ENCRYPTED/RANDOM · &gt;6.0 = COMPRESSED · &lt;1.0 = REPETITIVE.</span>
+
+<div class="doc-section">▸ DSP PIPELINE — SIGNAL FLOW</div>
+<span class="doc-code">ANTENNA
+  └─► ADC (Ettus USRP X310 · 2.0 MSPS · 16-bit I/Q)
+        └─► Band-pass filter (Butterworth/Chebyshev/Elliptic · IIR · zero-phase)
+              └─► Windowed FFT (Blackman-Harris · coherent gain corrected · 1024-pt)
+                    ├─► Power spectrum (dBFS · one-sided · calibrated)
+                    ├─► Waterfall / Dynamic Spectrum (STFT · hop=128 · inferno cmap)
+                    ├─► Spectral Kurtosis (SK · per-channel · RFI flagging)
+                    ├─► RFI Excision (3-pass: SK + persistent narrowband + broadband impulse)
+                    ├─► Doppler drift estimation (16-segment linear regression)
+                    ├─► Period search (Lomb-Scargle + Fast Folding Algorithm)
+                    ├─► Incoherent de-dispersion (DM trial · per-channel delay)
+                    ├─► Feature extraction (40-dim vector · 25 ms latency)
+                    ├─► Ensemble ML classification (RF+GB+SVM · 5-fold CV)
+                    ├─► Conformal prediction set (RAPS · alpha=0.10 · 90% coverage)
+                    ├─► SHAP attribution (Kernel SHAP · 100 coalitions)
+                    ├─► SETI scoring (7-discriminant Bayesian · P(ET) posterior)
+                    ├─► Anomaly detection (IF+LOF+OCSVM+MCD · ensemble vote)
+                    ├─► Crypto decode (Morse + ASCII + BPSK + Prime + Cipher cascade)
+                    └─► Drive archive (HMAC-signed · Reed-Solomon · HQ uplink)
+</span>
+
+<div class="doc-section">▸ PHYSICAL CONSTANTS IN USE</div>
+<table class="doc-table">
+<tr><th>Constant</th><th>Symbol</th><th>Value</th><th>Application</th></tr>
+<tr><td>Speed of light</td><td>c</td><td>2.997 924 58 × 10⁸ m/s</td><td>Doppler velocity, dispersion</td></tr>
+<tr><td>Boltzmann constant</td><td>k_B</td><td>1.380 649 × 10⁻²³ J/K</td><td>Radiometer equation, noise power</td></tr>
+<tr><td>Planck constant</td><td>h</td><td>6.626 070 15 × 10⁻³⁴ J·s</td><td>Photon energy calculations</td></tr>
+<tr><td>Dispersion constant</td><td>k_DM</td><td>4.148 808 × 10³ MHz² pc cm³ s⁻¹</td><td>Interstellar dispersion delay</td></tr>
+<tr><td>Solar constant</td><td>S₀</td><td>1361 W/m²</td><td>Solar panel power modelling</td></tr>
+<tr><td>Parsec</td><td>pc</td><td>3.085 677 581 × 10¹⁶ m</td><td>Distance / DM calculations</td></tr>
+<tr><td>System temperature</td><td>T_sys</td><td>25.0 K (cryo LNA)</td><td>Radiometer sensitivity limit</td></tr>
+<tr><td>Galactic background</td><td>T_sky</td><td>3.5 K @ 1.4 GHz</td><td>Effective system temperature</td></tr>
+<tr><td>Dish diameter</td><td>D</td><td>8.5 m</td><td>Beam width θ = 1.22 λ/D</td></tr>
+<tr><td>Effective area</td><td>A_eff</td><td>56.7 m² (η_a ≈ 1.0)</td><td>Flux density → signal power</td></tr>
+</table>
+
+<div class="doc-section">▸ 03:33 EVENT — TEMPORAL ANOMALY PROTOCOL</div>
+The <span class="doc-dng">03:33 window</span> (in-game hours 03:20–03:46) is the highest-risk observation period.
+Anomaly detection sensitivity multiplied ×5. ARIRAL signal probability elevated ×7.
+The following protocols are mandatory during this window:
+
+<span class="doc-code">PROTOCOL_0333:
+  1. Do NOT open any exterior doors.
+  2. Log ALL signal acquisitions regardless of class.
+  3. Do NOT look outside the base windows.
+  4. If a VOID_CARRIER is detected:
+       a. Do NOT process to Level 3.
+       b. Delete the signal file immediately.
+       c. Erase the drive (DriveManager.erase_drive()).
+       d. Submit erasure confirmation to HQ.
+       e. If you hear knocking — it is not HQ.
+  5. After 04:00 local time: resume normal operations.
+  6. Do NOT discuss 03:33 events on open channels.
+     Use cipher K-9 for secure reporting.
+</span>
+
+<div class="doc-section">▸ DRIVE SUBMISSION PROTOCOL</div>
+<span class="doc-code">Step 1: Acquire signals → signal_log[] populated automatically
+Step 2: Harvest → ArchiveManager.ingest() → HMAC integrity tag assigned
+Step 3: Build package → archive.build_drive_package(drive_id, max_records=200)
+          Priority queue: WoW≥8 → EMERGENCY, WoW≥6 → PRIORITY, WoW≥4 → EXPEDITED
+Step 4: Simulate transmission:
+          raw_bytes → gzip (×0.45) → Reed-Solomon (+25%) → uplink @ 128 kbps
+Step 5: HQ.submit(package) → HQResponseCode returned
+Step 6: Parse response:
+          ACK_CLEAN         → +10% bonus points · +2 ARIRAL rep
+          ACK_WITH_WARNINGS → review flagged records
+          ARIRAL_COMMEND    → +25% bonus · +10 ARIRAL rep · achievement unlock
+          PRIORITY_ESCALATE → +40% bonus · WoW≥8.0 confirmed by HQ
+          REJECT_VOID_CONT  → −50 ARIRAL rep · TERMINATION REVIEW
+          REJECT_INTEGRITY  → HMAC mismatch · check equipment
+Step 7: Insert fresh 512 MB drive. Continue acquisition.
+</span>
+
+<div class="doc-section">▸ STORY MODE — DAY SEQUENCE REFERENCE</div>
+<table class="doc-table">
+<tr><th>Day</th><th>Time</th><th>Event</th><th>Action</th></tr>
+<tr><td>1</td><td>00:00</td><td>Assignment begins. Minimum 5 signals/day.</td><td>Begin acquisition.</td></tr>
+<tr><td>3</td><td>Any</td><td>HQ requests SIERRA satellite hash code.</td><td>Submit hash via Email.</td></tr>
+<tr><td>5</td><td>Any</td><td>PROTOCOL 7-OMEGA briefing received.</td><td>Read carefully.</td></tr>
+<tr><td>8</td><td>00:45</td><td class="doc-gold">Two Ariral warp arrows arrive — valley X:-177 / Y:-510. Picnic established.</td><td class="doc-gold">Do not steal. Photograph for +5 rep.</td></tr>
+<tr><td>8</td><td>01:45</td><td>Servers SIERRA + ROMEO go offline simultaneously.</td><td>Document. Submit anomaly report.</td></tr>
+<tr><td>10</td><td>00:01</td><td>Ariral ships and picnic vanish.</td><td>Items left at picnic also vanish.</td></tr>
+<tr><td>13</td><td>00:00</td><td class="doc-warn">Emails from "user" — subject: "blank" — body: "####OUTSIDE####"</td><td class="doc-warn">Do NOT go outside. A warp arrow is visible from window.</td></tr>
+<tr><td>14</td><td>19:18</td><td class="doc-warn">Look away from radar. Something appears outside.</td><td class="doc-warn">Take photograph. Do not approach.</td></tr>
+<tr><td>22</td><td>00:00</td><td>Two Ariral water guns spawn in treehouse. Auto-counted as "returned".</td><td>+10 reputation (2×5).</td></tr>
+<tr><td>Any</td><td>03:33</td><td class="doc-dng">Temporal anomaly window. Anomaly probability ×5. VOID_CARRIER risk elevated.</td><td class="doc-dng">Do not open door. Log everything.</td></tr>
+</table>
+
+<div class="doc-section">▸ KNOWN PULSAR CATALOG (SUBSET — ASO REFERENCE)</div>
+<table class="doc-table">
+<tr><th>Designation</th><th>Period (s)</th><th>DM (pc·cm⁻³)</th><th>Notes</th></tr>
+<tr><td>B0531+21 (Crab)</td><td>0.033 102</td><td>56.8</td><td>Supernova remnant. First pulsar timing standard. Giant pulses detected.</td></tr>
+<tr><td>B0833-45 (Vela)</td><td>0.089 329</td><td>67.9</td><td>Closest young pulsar. Glitches observed. Spin-down age ~11 kyr.</td></tr>
+<tr><td>B1919+21</td><td>1.337 301</td><td>12.4</td><td>First discovered pulsar (1967, Bell Burnell). Cambridge radio telescope.</td></tr>
+<tr><td>B1937+21</td><td>0.001 558</td><td>71.0</td><td>First millisecond pulsar. Spin-down age ~240 Myr. Recycled.</td></tr>
+<tr><td>J0437-4715</td><td>0.005 757</td><td>2.6</td><td>Brightest MSP in sky. Primary timing array reference.</td></tr>
+<tr><td>B1257+12</td><td>0.006 219</td><td>10.2</td><td>First confirmed exoplanet host. Three planets detected via timing.</td></tr>
+</table>
+
+<div class="doc-section">▸ ARIRAL SYMBOL ENCODING — PRIME MAP (PARTIAL)</div>
+<table class="doc-table">
+<tr><th>Prime</th><th>Symbol</th><th>Meaning</th><th>Prime</th><th>Symbol</th><th>Meaning</th></tr>
+<tr><td>2</td><td>∅</td><td>void / null</td><td>41</td><td>◎</td><td>acknowledge</td></tr>
+<tr><td>3</td><td>◈</td><td>signal</td><td>43</td><td>⊜</td><td>transmit</td></tr>
+<tr><td>5</td><td>◉</td><td>observer</td><td>47</td><td>⊝</td><td>receive</td></tr>
+<tr><td>7</td><td>⊕</td><td>contact</td><td>53</td><td>⬟</td><td>time</td></tr>
+<tr><td>11</td><td>⊗</td><td>warning</td><td>59</td><td>⬠</td><td>frequency</td></tr>
+<tr><td>13</td><td>△</td><td>approach</td><td>61</td><td>⬡</td><td>entity</td></tr>
+<tr><td>17</td><td>▽</td><td>retreat</td><td>67</td><td>⊞</td><td>end</td></tr>
+<tr><td>19</td><td>◇</td><td>gift / shrimp</td><td>71</td><td>⊟</td><td>begin</td></tr>
+<tr><td>23</td><td>⬡</td><td>station</td><td>79</td><td>⊡</td><td>home</td></tr>
+<tr><td>29</td><td>⬢</td><td>array</td><td>83</td><td>⋈</td><td>bridge</td></tr>
+<tr><td>31</td><td>⊙</td><td>star-system</td><td>89</td><td>⋉</td><td>threshold</td></tr>
+<tr><td>37</td><td>⊛</td><td class="doc-dng">danger</td><td>97</td><td>⋊</td><td>beyond</td></tr>
+</table>
+
+<span class="doc-dim">Known decoded phrases:
+  [3, 5, 41]       → SIGNAL — OBSERVER — ACKNOWLEDGE
+  [7, 19, 5]       → CONTACT — GIFT — OBSERVER
+  [11, 13, 29]     → WARNING — APPROACH — ARRAY
+  [71, 3, 41, 67]  → BEGIN — SIGNAL — ACKNOWLEDGE — END
+  [5, 89, 97]      → OBSERVER — THRESHOLD — BEYOND
+  [2, 67]          → VOID — END  ⚠ (requires immediate escalation)
+  [37, 11, 17]     → DANGER — WARNING — RETREAT
+</span>
+
+<div class="doc-section">▸ DEPLOYMENT — STREAMLIT CLOUD</div>
+<span class="doc-code">Directory structure (all files at same level):
+  vOiD.py                 ← this file (frontend entrypoint)
+  signal_engine.py        ← Backend 1
+  spectral_analyzer.py    ← Backend 2
+  anomaly_detector.py     ← Backend 3
+  ml_predictor.py         ← Backend 4
+  environment_monitor.py  ← Backend 5
+  hq_reporter.py          ← Backend 6
+  crypto_decoder.py       ← Backend 7
+  requirements.txt        ← all dependencies
+  bg.png                  ← optional background image (auto-loaded)
+
+requirements.txt (minimum):
+  streamlit==1.38.0
+  numpy pandas scipy matplotlib
+  scikit-learn statsmodels
+  plotly seaborn
+
+Streamlit Cloud settings:
+  Main file: vOiD.py
+  Python   : 3.11+
+  Memory   : 2 GB recommended (ML models in session cache)
+
+Background image:
+  Place any PNG named bg.png in the repo root.
+  vOiD.py auto-detects and base64-encodes it at boot.
+  All UI panels are glass/transparent: bg shows through.
+  Recommended: dark space/forest panorama, 1920×1080+.
+</span>
+
+<div class="doc-section">▸ SECURITY CLASSIFICATION</div>
+<span class="doc-dng">CLASSIFICATION: RESTRICTED — ASO INTERNAL USE ONLY</span>
+
+Signal records are HMAC-SHA256 signed with a station-specific key.
+Any record with integrity_hash mismatch must be quarantined and reported to HQ.
+VOID_CARRIER class signals are subject to PROTOCOL 7-OMEGA.
+Unauthorised transmission of VOID_CARRIER data is a termination offence.
+All drive hashes are logged server-side at HQ-PROMETHEUS-CENTRAL.
+Satellite hash codes rotate daily. Request new codes via secure email channel.
+
+<span class="doc-dim">This documentation is generated at runtime from system state.
+Last updated: dynamic · Station: ASO-DUNKELTALER-01 · Clearance: LEVEL-4
+</span>
+
+</div>
+""", unsafe_allow_html=True)
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
