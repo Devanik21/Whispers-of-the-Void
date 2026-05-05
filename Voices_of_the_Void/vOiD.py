@@ -1965,7 +1965,7 @@ def render_boot(B: Dict) -> None:
 </div>
 """, unsafe_allow_html=True)
     # ── Collapsed documentation panel below boot screen ──────────────────
-    with st.expander("▸ SIGNAL_CATALOG & OBSERVATORY_PROTOCOLS ", expanded=False):
+    with st.expander("▸ DEEP SIGNAL CATALOG & OBSERVATORY PROTOCOLS ", expanded=False):
         st.markdown("""
 <style>
 .doc-block {
