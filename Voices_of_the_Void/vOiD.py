@@ -505,11 +505,10 @@ code, pre, .stCodeBlock {{
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
 /* ─── HIDE DEFAULT CHROME ─────────────────────────────────────────────────── */
-#MainMenu, [data-testid="stToolbar"], .viewerBadge_container {{ display: none !important; }}
-header {{ 
-  visibility: hidden !important; 
+#MainMenu, [data-testid="stToolbar"], .viewerBadge_container { display: none !important; }
+header { 
   background: transparent !important; 
-}}
+}
 /* Force the toggle button to the top and protect its font */
 [data-testid="collapsedControl"] {{
   visibility: visible !important;
