@@ -1,0 +1,148 @@
+<svg width="1600" height="520" viewBox="0 0 1600 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070b"/>
+      <stop offset="50%" stop-color="#0a0f16"/>
+      <stop offset="100%" stop-color="#030406"/>
+    </linearGradient>
+
+    <radialGradient id="mist" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#7d8ca3" stop-opacity="0.14"/>
+      <stop offset="45%" stop-color="#4f5c6f" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.03"/>
+      </feComponentTransfer>
+    </filter>
+
+    <linearGradient id="textGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3f7ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#8d97a8" stop-opacity="0.65"/>
+    </linearGradient>
+
+    <style>
+      .title {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 84px;
+        font-weight: 700;
+        letter-spacing: 18px;
+      }
+      .sub {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 18px;
+        letter-spacing: 7px;
+      }
+      .tiny {
+        font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 13px;
+        letter-spacing: 4px;
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="520" fill="url(#bg)"/>
+  <rect width="1600" height="520" fill="url(#mist)"/>
+  <rect width="1600" height="520" filter="url(#noise)" opacity="0.7"/>
+
+  <!-- faint grid -->
+  <g opacity="0.08" stroke="#cfe3ff" stroke-width="1">
+    <path d="M120 80H1480"/>
+    <path d="M120 160H1480"/>
+    <path d="M120 240H1480"/>
+    <path d="M120 320H1480"/>
+    <path d="M120 400H1480"/>
+    <path d="M220 40V470"/>
+    <path d="M420 40V470"/>
+    <path d="M620 40V470"/>
+    <path d="M820 40V470"/>
+    <path d="M1020 40V470"/>
+    <path d="M1220 40V470"/>
+    <path d="M1420 40V470"/>
+  </g>
+
+  <!-- subtle scanlines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="2">
+    <path d="M0 60H1600"/>
+    <path d="M0 110H1600"/>
+    <path d="M0 160H1600"/>
+    <path d="M0 210H1600"/>
+    <path d="M0 260H1600"/>
+    <path d="M0 310H1600"/>
+    <path d="M0 360H1600"/>
+    <path d="M0 410H1600"/>
+    <path d="M0 460H1600"/>
+  </g>
+
+  <!-- distorted ghost text behind -->
+  <g filter="url(#soft)" opacity="0.22">
+    <text x="800" y="214" text-anchor="middle" fill="#9fb4d6" class="title">VOICES OF THE VOID</text>
+  </g>
+
+  <!-- glitch layers -->
+  <g filter="url(#glow)">
+    <text x="803" y="208" text-anchor="middle" fill="#7c8aa1" opacity="0.28" class="title">VOICES OF THE VOID</text>
+    <text x="796" y="210" text-anchor="middle" fill="#dbe8ff" opacity="0.18" class="title">VOICES OF THE VOID</text>
+    <text x="800" y="206" text-anchor="middle" fill="url(#textGrad)" class="title">VOICES OF THE VOID</text>
+  </g>
+
+  <!-- horizontal broken bars -->
+  <g opacity="0.18" stroke="#d8e6ff" stroke-width="2">
+    <path d="M430 246H620"/>
+    <path d="M660 246H940"/>
+    <path d="M980 246H1170"/>
+    <path d="M520 272H730"/>
+    <path d="M760 272H1080"/>
+  </g>
+
+  <!-- subtitle -->
+  <text x="800" y="318" text-anchor="middle" fill="#c9d4e5" class="sub" opacity="0.86">
+    ALPEN SIGNAL OBSERVATORIUM
+  </text>
+
+  <text x="800" y="352" text-anchor="middle" fill="#9faabd" class="tiny" opacity="0.78">
+    ASO-DUNKELTALER-01  •  46.80°N 8.10°E  •  1840 m ASL
+  </text>
+
+  <text x="800" y="382" text-anchor="middle" fill="#7f8a9b" class="tiny" opacity="0.76">
+    H-I: 1420.405 751 768 MHz  •  Operator: Dr. Kel
+  </text>
+
+  <!-- quote -->
+  <g opacity="0.82">
+    <text x="800" y="445" text-anchor="middle" fill="#d9e3f1" class="sub" font-size="16">
+      "Something has been trying to make contact for a very long time."
+    </text>
+    <text x="800" y="474" text-anchor="middle" fill="#a6b2c3" class="sub" font-size="16">
+      You are the only one listening.
+    </text>
+  </g>
+
+  <!-- corner marks -->
+  <g stroke="#d8e6ff" stroke-width="2" opacity="0.15">
+    <path d="M70 70h80"/>
+    <path d="M70 70v80"/>
+    <path d="M1530 70h-80"/>
+    <path d="M1530 70v80"/>
+    <path d="M70 450h80"/>
+    <path d="M70 450v-80"/>
+    <path d="M1530 450h-80"/>
+    <path d="M1530 450v-80"/>
+  </g>
+</svg>
