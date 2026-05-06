@@ -8,6 +8,8 @@
 <br><br>
 
 
+
+
     
 </div>
 
@@ -56,6 +58,14 @@
 >
 > [ SYSTEM READY — BEGIN OBSERVATIONS ]
 
+
+<div align="center">
+  
+<img width="720" height="337" alt="image" src="https://github.com/user-attachments/assets/6dfe9d41-980c-4d5d-bbf0-c31c9c146786" />
+
+    
+</div>
+
 ---
 
 ## Table of Contents
@@ -103,6 +113,16 @@ The platform performs end-to-end processing of synthetic radio signals: from phy
 This is not a demo. Every algorithm is implemented from mathematical first principles. Every constant is physical. Every equation is documented below.
 
 > *"The array is running. The sky is quiet. Something will come through tonight. It always does."*
+
+---
+
+
+<div align="center">
+  
+<img width="720" height="405" alt="0_3l9_mNwflcogokHO" src="https://github.com/user-attachments/assets/8f53c67a-6593-43c0-ae40-4831632afba0" />
+
+    
+</div>
 
 ---
 
@@ -214,6 +234,17 @@ Whispers-of-the-Void/
 ```
 
 > **Note**: Place `bg.png` (any dark space/forest panorama, ≥1920×1080) in the `Voices_of_the_Void/` directory. The frontend auto-detects and base64-encodes it at boot. All UI panels are glass/transparent so the image shows through the scanline overlay.
+
+---
+
+
+<div align="center">
+  
+<img width="1400" height="786" alt="0_mG1scIFiJUPMpmq-" src="https://github.com/user-attachments/assets/92a8f7bf-ba5f-441b-8178-a801e021983c" />
+
+
+    
+</div>
 
 ---
 
@@ -1809,6 +1840,18 @@ where `{p_k}` are the first K prime numbers.
 
 The phrase `[2, 67]` (VOID — END) is associated with `VOID_CARRIER` class signals and triggers `CONTAINMENT` protocol immediately upon detection.
 
+---
+
+<div align="center">
+  
+<img width="1400" height="788" alt="0_UAYtqwVamwmA-JHx" src="https://github.com/user-attachments/assets/f63bfa3a-13a7-4a12-9029-27c0846bf03e" />
+
+
+    
+</div>
+
+---
+
 ### The Fibonacci Word
 
 The infinite Fibonacci word is the unique fixed point of the morphism `sigma`:
@@ -1871,6 +1914,17 @@ P_{block\_err} \approx \binom{255}{17} (BER)^{17} (1-BER)^{238} \approx 10^{-44}
 ```
 
 essentially negligible.
+
+---
+
+
+<div align="center">
+  
+<img width="1400" height="788" alt="0_Wrtaifn4KmmUj9KI" src="https://github.com/user-attachments/assets/886d6f12-650a-48b7-a9da-53e9b3efecd3" />
+
+
+    
+</div>
 
 ---
 
@@ -2220,6 +2274,10 @@ Copyright (c) 2026 Devanik21
 [![GitHub](https://img.shields.io/badge/GitHub-Devanik21-00ff88?style=flat-square&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/Devanik21)
 
 </div>
+
+---
+
+<img width="720" height="217" alt="0_Nae2IkuPIauXsZ9m" src="https://github.com/user-attachments/assets/affd5fde-83db-4a75-87aa-d1054b0c519b" />
 
 ---
 
