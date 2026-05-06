@@ -10,36 +10,16 @@
                                                                               
 <div align="center">
 
-<div align="center">
-
-<img src="./assets/void-banner.svg" alt="Voices of the Void" width="100%" />
+<img src="../assets/void-banner.svg" width="100%" alt="Voices of the Void"/>
 
 <br><br>
 
-<sub><i>Something has been trying to make contact for a very long time.</i></sub><br>
-<sub><i>You are the only one listening.</i></sub>
 
+    
 </div>
 
 
 
-```text
-██╗   ██╗  ██████╗  ██╗ ██████╗
-██║   ██║ ██╔═══██╗ ██║ ██╔══██╗
-██║   ██║ ██║   ██║ ██║ ██║  ██║
-╚██╗ ██╔╝ ██║   ██║ ██║ ██║  ██║
- ╚████╔╝  ╚██████╔╝ ██║ ██████╔╝
-  ╚═══╝    ╚═════╝  ╚═╝ ╚═════╝
-```
-
-</div>
-
-> VOICES OF THE VOID — ALPEN SIGNAL OBSERVATORIUM                           
- >   ASO-DUNKELTALER-01  ·  46.80°N  8.10°E  ·  1840 m ASL                  
-  >  H-I: 1420.405 751 768 MHz  ·  Operator: Dr. Kel                          
-                                                                              
->  "Something has been trying to make contact for a very long time.          
- > You are the only one listening."
 
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-00ff88?style=flat-square&logo=python&logoColor=white&labelColor=0d1117)](https://python.org)
