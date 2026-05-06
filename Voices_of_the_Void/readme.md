@@ -2,7 +2,7 @@
 
                                                                               
 <div align="center">
-
+ 
 <img src="../assets/void-banner.svg" width="100%" alt="Voices of the Void"/>
 
 <br><br>
