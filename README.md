@@ -60,8 +60,10 @@
 
 
 <div align="center">
-  
-<img width="720" height="337" alt="image" src="https://github.com/user-attachments/assets/6dfe9d41-980c-4d5d-bbf0-c31c9c146786" />
+
+
+<img width="1983" height="793" alt="ChatGPT Image May 2, 2026, 09_50_36 AM" src="https://github.com/user-attachments/assets/bbad49bd-fc8d-48c8-a72e-1c0823f60cb1" />
+
 
     
 </div>
@@ -2289,8 +2291,8 @@ Copyright (c) 2026 Devanik21
 
 <div align="center">
   
-<img width="1983" height="793" alt="ChatGPT Image May 2, 2026, 09_50_36 AM" src="https://github.com/user-attachments/assets/bbad49bd-fc8d-48c8-a72e-1c0823f60cb1" />
 
+<img width="720" height="337" alt="image" src="https://github.com/user-attachments/assets/6dfe9d41-980c-4d5d-bbf0-c31c9c146786" />
     
 </div>
 
