@@ -3,7 +3,7 @@
                                                                               
 <div align="center">
  
-<img src="assets/void-banner.svg" width="100%" alt="Voices of the Void"/>
+<img src="../assets/void-banner.svg" width="100%" alt="Voices of the Void"/>
 
 <br><br>
 
@@ -2275,7 +2275,7 @@ Copyright (c) 2026 Devanik21
 
 <div align="center">
 
-<img src="assets/transmission-closing.svg" width="100%" alt="Transmission Closing"/>
+<img src="../assets/transmission-closing.svg" width="100%" alt="Transmission Closing"/>
 
 </div>
 
