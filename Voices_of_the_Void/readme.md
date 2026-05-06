@@ -363,6 +363,16 @@ implemented in `DishHealth.system_temp_penalty_k()` and `SignalQualityCalculator
 
 ---
 
+<div align="center">
+
+<img width="1661" height="947" alt="bg" src="https://github.com/user-attachments/assets/3b6e39fc-4814-42df-9dec-b8efa7791557" />
+
+
+    
+</div>
+
+---
+
 ## Signal Classification Taxonomy
 
 The system classifies signals into 11 distinct classes across three origin categories (astrophysical, engineered, anomalous). Classification uses a 40-dimensional feature vector extracted by `AnomalyFeatureExtractor` and scored by a three-model ensemble.
@@ -2273,17 +2283,16 @@ Copyright (c) 2026 Devanik21
 
 [![GitHub](https://img.shields.io/badge/GitHub-Devanik21-00ff88?style=flat-square&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/Devanik21)
 
-</div>
+
 
 ---
 
 <div align="center">
   
-<img width="720" height="217" alt="0_Nae2IkuPIauXsZ9m" src="https://github.com/user-attachments/assets/3709b6f4-04b4-4fe3-a80a-82a433180714" />
-
+<img width="1983" height="793" alt="ChatGPT Image May 2, 2026, 09_50_36 AM" src="https://github.com/user-attachments/assets/bbad49bd-fc8d-48c8-a72e-1c0823f60cb1" />
 
     
 </div>
----
 
-*"Humanity thought the universe was silent — until something in the void realized we were listening."*
+
+> *"Humanity thought the universe was silent — until something in the void realized we were listening."*
