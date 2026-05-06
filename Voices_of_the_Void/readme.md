@@ -2277,8 +2277,13 @@ Copyright (c) 2026 Devanik21
 
 ---
 
-<img width="720" height="217" alt="0_Nae2IkuPIauXsZ9m" src="https://github.com/user-attachments/assets/affd5fde-83db-4a75-87aa-d1054b0c519b" />
+<div align="center">
+  
+<img width="720" height="217" alt="0_Nae2IkuPIauXsZ9m" src="https://github.com/user-attachments/assets/3709b6f4-04b4-4fe3-a80a-82a433180714" />
 
+
+    
+</div>
 ---
 
 *"Humanity thought the universe was silent — until something in the void realized we were listening."*
