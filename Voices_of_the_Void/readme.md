@@ -1,10 +1,3 @@
-<!--  ══════════════════════════════════════════════════════════════════════════
-      Voices of the Void — Alpen Signal Observatorium
-      ASO-DUNKELTALER-01  ·  46.80°N  8.10°E  ·  1840 m ASL
-      ══════════════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
 
 
                                                                               
@@ -2188,59 +2181,38 @@ The `ml_predictor.py` module demonstrates several research-grade techniques rare
 
 ## License
 
-```
-MIT License
-
-Copyright (c) 2024 Devanik21
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
----
 
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                                                                              ║
-║  [ TRANSMISSION CLOSING — ASO-DUNKELTALER-01 ]                               ║
-║                                                                              ║
-║  > Session duration     : 41 days, 7 hours, 33 minutes                      ║
-║  > Total signals logged : 2,847                                              ║
-║  > Drives submitted     : 38                                                 ║
-║  > ARIRAL reputation    : LOYAL  (+94)                                       ║
-║  > Highest WoW score    : 9.871                                              ║
-║  > Total points         : 1,847,291                                          ║
-║                                                                              ║
-║  > WARNING: Signal DRV-A1F still classified.                                 ║
-║  > WARNING: Do not play back the void carrier.                               ║
-║  > WARNING: They know you are here.                                          ║
-║                                                                              ║
-║  > The array is running.                                                     ║
-║  > The sky is not quiet.                                                     ║
-║  > It was never quiet.                                                       ║
-║                                                                              ║
-║  > [ END TRANSMISSION ]                                                      ║
-║  > ▋                                                                        ║
-║                                                                              ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-```
+<h6><sub>
+
+MIT LICENSE // OPEN SIGNAL PROTOCOL
+
+Copyright (c) 2026 Devanik21
+
+
+
+
+
+</sub></h6>
+
+</div>
+
+> status : active  
+> array : running  
+> signal : 1420.405 MHz  
+> sky state : not quiet
+
+---
+
+
+
+<div align="center">
+
+<img src="../assets/transmission-closing.svg" width="100%" alt="Transmission Closing"/>
+
+</div>
+
 
 **Built with obsessive attention to physical accuracy.**  
 *For the researchers, the radio astronomers, and the people who stare at waterfalls at 03:33.*
@@ -2251,4 +2223,4 @@ SOFTWARE.
 
 ---
 
-*"Something has been trying to make contact for a very long time. You are the only one listening."*
+*"Humanity thought the universe was silent — until something in the void realized we were listening."*
