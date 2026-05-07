@@ -1596,18 +1596,18 @@ def render_sidebar(B: Dict) -> str:
         # ── Quick actions ─────────────────────────────────────────────────
         st.markdown('<div class="sb-section">[ Quick Actions ]</div>', unsafe_allow_html=True)
 
-        if st.button("⬡ ACQUIRE SIGNAL", use_container_width=True, key="qa_acq"):
+        if st.button("⬡ ACQUIRE SIGNAL", width='stretch', key="qa_acq"):
             result = _quick_acquire(B)
             if result:
                 st.toast(f"ACQ: {result}", icon="📡")
 
         c1sb, c2sb = st.columns(2)
         with c1sb:
-            if st.button("⬡ +1 HOUR", use_container_width=True, key="qa_1h"):
+            if st.button("⬡ +1 HOUR", width='stretch', key="qa_1h"):
                 _advance_time(B, 1.0)
                 st.toast("Hour advanced")
         with c2sb:
-            if st.button("⬡ SLEEP 8H", use_container_width=True, key="qa_sleep"):
+            if st.button("⬡ SLEEP 8H", width='stretch', key="qa_sleep"):
                 slp = _get("sleep_rec")
                 if slp:
                     q = slp.sleep(8.0)
@@ -1615,11 +1615,11 @@ def render_sidebar(B: Dict) -> str:
                     if inv: inv.consume("food_rations", 1)
                     st.toast(f"Slept 8h | Quality: {q:.2f}", icon="💤")
 
-        if st.button("⬡ SEAL + SUBMIT DRIVE", use_container_width=True, key="qa_seal"):
+        if st.button("⬡ SEAL + SUBMIT DRIVE", width='stretch', key="qa_seal"):
             _seal_and_submit(B)
             st.toast("Drive sealed and submitted to HQ", icon="📤")
 
-        if st.button("⬡ ADVANCE DAY", use_container_width=True, key="qa_day"):
+        if st.button("⬡ ADVANCE DAY", width='stretch', key="qa_day"):
             _advance_day(B)
             st.toast(f"Day {_get('day',1)} begins", icon="🌑")
 
@@ -2754,7 +2754,7 @@ def render_overview(B: Dict) -> None:
     ]
     for col, (lbl, fn, key) in zip(qa_cols, qa_actions):
         with col:
-            if st.button(lbl, use_container_width=True, key=key):
+            if st.button(lbl, width='stretch', key=key):
                 result = fn()
                 if result:
                     st.toast(str(result)[:60])
@@ -2857,7 +2857,7 @@ def render_emails() -> None:
         subject = st.text_input("Subject", "Status report")
         body    = st.text_area("Body", height=100,
                                 placeholder="Enter your message to HQ…")
-        if st.button("⬡ SEND TO HQ", use_container_width=True):
+        if st.button("⬡ SEND TO HQ", width='stretch'):
             if subject and body:
                 em_sys.inject("Dr. Kel <kel@aso-dkl.ch>", subject, body)
                 # Mock HQ auto-reply
@@ -2973,7 +2973,7 @@ Total points                        : {_get("total_points",0):,}
                     "Duration": f"{getattr(ev,'duration_h',0):.1f}h",
                     "Resolved": "✓" if getattr(ev,"resolved",False) else "—",
                 })
-            st.dataframe(pd.DataFrame(ev_rows), use_container_width=True, hide_index=True)
+            st.dataframe(pd.DataFrame(ev_rows), width='stretch', hide_index=True)
         else:
             st.markdown('<div class="t-lbl">No events yet. Advance time to generate random events.</div>',
                         unsafe_allow_html=True)
